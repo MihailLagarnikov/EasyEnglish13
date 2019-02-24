@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SeekBarColor"
+           parent="Widget.AppCompat.SeekBar">
+        <item name="colorAccent">@color/colorSeekbarFon</item>
+    </style>
+
+        <style name="text48colorWhite">
+            <item name="android:textSize">48sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@android:color/white</item>
+        </style>
+
+
+
+        <style name="text36colorMain">
+            <item name="android:textSize">36sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextMain</item>
+        </style>
+
+    <style name="text30colorWhithe">
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+        <style name="text28colorMain">
+            <item name="android:textSize">28sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextMain</item>
+        </style>
+
+    <style name="text24colorWhite">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+        <style name="text22colorMain">
+            <item name="android:textSize">22sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextMain</item>
+        </style>
+
+        <style name="text20colorWhite">
+            <item name="android:textSize">20sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@android:color/white</item>
+        </style>
+
+        <style name="text20colorMain">
+            <item name="android:textSize">20sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextMain</item>
+        </style>
+
+        <style name="text18colorLigth">
+            <item name="android:textSize">18sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextLight</item>
+        </style>
+
+    <style name="text18colorWhite">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="text18colorMain">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextMain</item>
+    </style>
+
+    <style name="text16colorMain">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextMain</item>
+    </style>
+
+        <style name="text14colorWhite">
+            <item name="android:textSize">14sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@android:color/white</item>
+        </style>
+
+        <style name="text14colorLight">
+            <item name="android:textSize">14sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">@color/colorTextLight2</item>
+        </style>
+
+    <style name="text14colorMain">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextMain</item>
+    </style>
+
+    <style name="text10colorDarck">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorDarckText</item>
+    </style>
+
+    <style name="text10colorWhite">
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">EasyEnglish1.3</string>
+
+    <string name="admobId">ca-app-pub-2421174998731562~1772735539</string>
+
+    <string name="hintTestTop1">выберите правильный вариант</string>
+    <string name="hintTestTop2">введите перевод</string>
+    <string name="hintTestTop3">произнесите перевод</string>
+    <string name="numberTestTop">УРОК №</string>
+    <string name="testCD1"><u>НЕ ЗНАЮ ПРАВИЛЬНЫЙ ОТВЕТ</u></string>
+    <string name="testE1"><u>ПРОПУСТИТЬ</u></string>
+    <string name="testE2">"Чтобы активировать голосовой поиск необходимо установить \"Голосовой поиск Google\""</string>
+
+    <string name="course1">By continuing, you agree to our Terms of Use</string>
+    <string name="course2">ВЫБРАТЬ КАТЕГОРИЮ</string>
+    <string name="course3">ВЫБЕРИ КОЛИЧЕСТВО СЛОВ</string>
+    <string name="course4">Привет!</string>
+    <string name="course5">Наша система поможет тебе выучить,
+        и что самое главное не забыть слова!</string>
+
+    <string name="theme1">КАТЕГОРИИ СЛОВ</string>
+    <string name="theme2"> words</string>
+
+
+    <string name="theme3"> УЧИТЬ</string>
+    <string name="theme4"> xx \nвремени</string>
+    <string name="theme5"> xx \nизучено</string>
+    <string name="theme6"> xx \nслов</string>
+    <string name="theme7">убрать из обучения</string>
+    <string name="theme8">Ознакомьтесь со словами и перейдите к обучению</string>
+    <string name="theme9">ОТКРЫТЬ ВСЕ</string>
+    <string name="theme10">CКРЫТЬ ВСЕ</string>
+    <string name="theme11">УРОК №</string>
+
+
+
+    <string name="themeMain1">Человек</string>
+    <string name="themeNumber1">98</string>
+    <string name="themeMain2">Здоровье</string>
+    <string name="themeNumber2">26</string>
+    <string name="themeMain3">Семья</string>
+    <string name="themeNumber3">20</string>
+    <string name="themeMain4">Дом</string>
+    <string name="themeNumber4">118</string>
+    <string name="themeMain5">Путешествия</string>
+    <string name="themeNumber5">60</string>
+    <string name="themeMain6">Размеры</string>
+    <string name="themeNumber6">20</string>
+    <string name="themeMain7">Еда</string>
+    <string name="themeNumber7">124</string>
+    <string name="themeMain8">Природа</string>
+    <string name="themeNumber8">61</string>
+    <string name="themeMain9">Цвета</string>
+    <string name="themeNumber9">61</string>
+    <string name="themeMain10">Одежда</string>
+    <string name="themeNumber10">45</string>
+    <string name="themeMain11">Животные</string>
+    <string name="themeNumber11">153</string>
+
+</resources>

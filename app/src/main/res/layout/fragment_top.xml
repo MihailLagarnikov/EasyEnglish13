@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+                name="mData"
+                type="ru.lagarnikov.easyenglish13.DataTopFragment" />
+
+        <variable
+                name="mVisibile"
+                type="ru.lagarnikov.easyenglish13.DataVisibileView" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrFragmentTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="0dp"
+            android:layout_height="144dp" app:srcCompat="@drawable/joney"
+            android:id="@+id/imageCurentTheme" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+    />
+    <TextView
+            android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+            tools:text="УРОК №1"
+            android:text="@{@string/numberTestTop + mData.numberLesson}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text36colorMain"
+            android:id="@+id/textLessonNumber" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"/>
+    <TextView
+            android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+           tools:text="ПУТЕШЕСТВИЯ"
+           android:text="@{mData.theneName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           style="@style/text20colorMain"
+            android:id="@+id/textViewTheme" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textLessonNumber"/>
+    <TextView
+            android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+            android:text="@string/hintTestTop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text14colorWhite"
+            android:id="@+id/textViewHint" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textViewTheme"/>
+    <ImageView
+            android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/window_close_white"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp" app:srcCompat="@drawable/pause"
+            android:visibility="invisible"
+            android:id="@+id/imageView3" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageCurentTheme" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@{mData.countTimer}"
+            android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text20colorWhite"
+            android:id="@+id/textСounting" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageCurentTheme" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/spiner_my"
+            android:indeterminateOnly="true"
+            android:id="@+id/progressBarCounting"
+            app:layout_constraintEnd_toEndOf="@+id/imageCurentTheme" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageCurentTheme"/>
+
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            app:srcCompat="@drawable/divider_white"
+            android:id="@+id/imageViewProgressLineBottom" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/imageCurentTheme"/>
+
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="6dp" app:srcCompat="@drawable/divider_a"
+            android:id="@+id/imageViewProgressLineTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewProgressLineBottom"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

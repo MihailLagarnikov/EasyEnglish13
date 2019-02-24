@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+            <import type="android.view.View"/>
+        <variable
+                name="mData"
+                type="ru.lagarnikov.easyenglish13.DataMidleFragment" />
+
+        <variable
+                name="mVisibile"
+                type="ru.lagarnikov.easyenglish13.DataVisibileView" />
+
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/colorBacgroundTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                tools:text="Заголовок - Вопрос"
+                android:visibility="@{mVisibile.typeTestA ? View.VISIBLE:(mVisibile.answerNotDone ? View.VISIBLE : View.GONE )}"
+                android:text="@{mData.titleRu}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textQestionTestA"
+                style="@style/text28colorMain"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="2dp" android:background="@drawable/divider_a"
+                android:id="@+id/imageDivider1"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="120dp" app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"/>
+        <TextView
+                tools:text="прав ответ"
+                android:visibility="@{mVisibile.typeTestA ? (mVisibile.answerNotDone ? View.VISIBLE : View.GONE ):(mVisibile.answerNotDone ? View.VISIBLE : View.GONE )}"
+                android:text="@{mData.titleEn}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text48colorWhite"
+                android:id="@+id/textTrueAnswerE" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textQestionTestA"/>
+        <ImageView
+                android:visibility="@{!mVisibile.answerNotDone ? View.GONE :(mVisibile.answerTrue ? View.VISIBLE : View.GONE )}"
+                android:layout_width="24dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/check"
+                android:id="@+id/imageAnswerTrueTestE" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="@+id/textQestionTestA"
+                app:layout_constraintBottom_toBottomOf="@+id/textQestionTestA"/>
+
+        <ImageView
+                android:visibility="@{!mVisibile.answerNotDone ? View.GONE :(!mVisibile.answerTrue ? View.VISIBLE : View.GONE )}"
+                android:layout_width="24dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/window_close_red"
+                android:id="@+id/imageAnswerFslseTestAB" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="@+id/imageAnswerTrueTestE"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAnswerTrueTestE"/>
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="2dp" app:srcCompat="@drawable/divider_a"
+                android:id="@+id/imageDivider2"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/imageDivider1"
+                android:layout_marginTop="73dp"/>
+
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="2dp" app:srcCompat="@drawable/divider_a"
+                android:id="@+id/imageDivider3"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/imageDivider2"
+                android:layout_marginTop="73dp" tools:ignore="ContentDescription"/>
+
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="2dp" app:srcCompat="@drawable/divider_a"
+                android:id="@+id/imageDivider4"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/imageDivider3"
+                android:layout_marginTop="73dp"/>
+
+
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="2dp" app:srcCompat="@drawable/divider_a"
+                android:id="@+id/imageDivider5"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/imageDivider4"
+                android:layout_marginTop="73dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+        <ImageView
+                android:visibility="@{mVisibile.typeTestA ? View.GONE :(!mVisibile.answerNotDone ? View.VISIBLE : View.GONE )}"
+                android:layout_width="58dp"
+                android:layout_height="58dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline_white"
+                android:id="@+id/imageSaundMainTestAB" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/imageDivider1"/>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorBacgroundTest"
+                app:layout_constraintBottom_toTopOf="@+id/imageDivider2"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider1" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@{mVisibile.numberAnswer!=1 ? @color/colorBacgroundTest :(mVisibile.answerTrue ? @color/colorAnswerTrue : @color/colorAnswerFalse )}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textItem1TestAB" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="parent"/>
+                <TextView
+                        tools:text="поезд"
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextMain : @android:color/white}"
+                        android:text="@{mData.text1Answer}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text18colorLigth"
+                        android:id="@+id/textAnswer1TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem1TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                        tools:text="train"
+                        android:text="@{mData.text1}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textViewOption1" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textAnswer1TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem1TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
+                        android:id="@+id/imageEclip1TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                        android:id="@+id/imageViewSound1TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorBacgroundTest"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/imageDivider2"
+                app:layout_constraintBottom_toTopOf="@+id/imageDivider3">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@{mVisibile.numberAnswer!=2 ? @color/colorBacgroundTest :(mVisibile.answerTrue ? @color/colorAnswerTrue : @color/colorAnswerFalse )}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textItem2TestAB" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="parent"/>
+                <TextView
+                        tools:text="домик для гостей"
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:textColor="@{mVisibile.numberAnswer!=2 ? @color/colorTextMain : @android:color/white}"
+                        android:text="@{mData.text2Answer}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text18colorLigth"
+                        android:id="@+id/textAnswer2TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem2TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                        tools:text="guest house"
+                        android:text="@{mData.text2}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textViewOption2" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textAnswer2TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem2TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView
+                        android:layout_width="24dp"
+                        android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
+                        android:id="@+id/imageEclip2TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                        android:id="@+id/imageViewSound2TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageDivider4"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@{mVisibile.numberAnswer!=3 ? @color/colorBacgroundTest :(mVisibile.answerTrue ? @color/colorAnswerTrue : @color/colorAnswerFalse )}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <TextView
+                        android:text="3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textItem3TestAB" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="parent"/>
+                <TextView
+                        tools:text="поезд"
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:textColor="@{mVisibile.numberAnswer!=3 ? @color/colorTextMain : @android:color/white}"
+                        android:text="@{mData.text3Answer}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text18colorLigth"
+                        android:id="@+id/textAnswer3TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem3TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                        tools:text="train"
+                        android:text="@{mData.text3}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textViewOption3" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textAnswer3TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem3TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
+                        android:id="@+id/imageEclip3TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                        android:id="@+id/imageViewSound3TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorBacgroundTest"
+                app:layout_constraintBottom_toTopOf="@+id/imageDivider5"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@{mVisibile.numberAnswer!=4 ? @color/colorBacgroundTest :(mVisibile.answerTrue ? @color/colorAnswerTrue : @color/colorAnswerFalse )}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textItem4TestAB" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="parent"/>
+                <TextView
+                        tools:text="хостел"
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:textColor="@{mVisibile.numberAnswer!=4 ? @color/colorTextMain : @android:color/white}"
+                        android:text="@{mData.text4Answer}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text18colorLigth"
+                        android:id="@+id/textAnswer4TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem4TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                <TextView
+                        tools:text="hostel"
+                        android:text="@{mData.text4}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text22colorMain"
+                        android:id="@+id/textViewOption4" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textAnswer4TestAB"
+                        app:layout_constraintStart_toEndOf="@+id/textItem4TestAB" android:layout_marginStart="59dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
+                        android:id="@+id/imageEclip4TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+                <ImageView
+                        android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                        android:id="@+id/imageViewSound4TestAB" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
