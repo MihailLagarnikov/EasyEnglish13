@@ -10,6 +10,7 @@
     <string name="testCD1"><u>НЕ ЗНАЮ ПРАВИЛЬНЫЙ ОТВЕТ</u></string>
     <string name="testE1"><u>ПРОПУСТИТЬ</u></string>
     <string name="testE2">"Чтобы активировать голосовой поиск необходимо установить \"Голосовой поиск Google\""</string>
+    <string name="testE3">"Подождите, запускается "Голосовой поиск Google"" </string>
 
     <string name="course1">By continuing, you agree to our Terms of Use</string>
     <string name="course2">ВЫБРАТЬ КАТЕГОРИЮ</string>
@@ -17,17 +18,97 @@
     <string name="course4">Привет!</string>
     <string name="course5">Наша система поможет тебе выучить,
         и что самое главное не забыть слова!</string>
+    <string name="course6">Число изучаемых слов должно быть больше 0!!!</string>
+    <string name="course7">Hello!</string>
+    <string name="course8">Наша система поможет\n
+        выучить, и что самое главное\n
+        не забыть слова!</string>
+    <string name="course9">Выбери программу обучения</string>
+    <string name="course10">ПОЛНЫЙ КУРС</string>
+    <string name="course11"><u>ВЫБРАТЬ КУРС</u></string>
+    <string name="course12">Включает: уроки по произношению,\n
+        уроки по грамматике, а также\n
+        выбор правильного перевода\n
+        из предложеных вариантов</string>
+    <string name="course13">01</string>
+    <string name="course14">02</string>
+    <string name="course15">ЛЕГКИЙ КУРС</string>
+    <string name="course16">Включает: выбор правильного\n
+        перевода из предложеных вариантов,\n
+        уроки а произношение,и ни какой\n
+        грамматики!</string>
+    <string name="course17">03</string>
+    <string name="course18">ПРОИЗНОШЕНИЕ</string>
+    <string name="course19">Включает: уроки по произношению,\n
+        а также выбор правильного перевода,\n
+        из предложеных вариантов\n
+        </string>
+
+    <string name="course20">Мы рекомендуем Вам\n
+        установить <b>10 слов в день.</b> Наша\n
+        система направлена на глубокое\n
+        изучение, поэтому большее количество\n
+        слов может ухудшить результаты</string>
+    <string name="course21">слов</string>
 
     <string name="theme1">КАТЕГОРИИ СЛОВ</string>
-    <string name="theme2"> words</string>
+    <string name="theme2">words</string>
+    <string name="theme12">% \nизучено</string>
+
+
+
+    <string name="lessonEnd1">Урок окончен!</string>
+    <string name="lessonEnd2">ПОЗДРАВЛЯЕМ !!!</string>
+    <string name="lessonEnd3">word</string>
+    <string name="lessonEnd4">time/min</string>
+    <string name="lessonEnd5">Установить напоминание</string>
+    <string name="lessonEnd6">СЛЕДУЮЩИЙ УРОК</string>
+    <string name="lessonEnd7">minutes</string>
+    <string name="lessonEnd8">ВЫБРАТЬ НОВУЮ ТЕМУ</string>
+    <string name="lessonEnd9">ПРОДОЛЖИТЬ УРОК</string>
+    <string name="lessonEnd10">Удалить напоминание</string>
+    <string name="lessonEnd11">Новый урок!</string>
+    <string name="lessonEnd12">Это Ваш первый урок по теме.\n
+        Не расстраивайтесь если вы будете\n
+        совершать ошибки</string>
+    <string name="lessonEnd13">"Сегодня "</string>
+    <string name="lessonEnd16">Поздравляем! Вы все повторили, теперь\n
+        Вы можете продолжить изучение\n
+        новых слов</string>
+    <string name="lessonEnd15">Пришло время закрепить материал!\n
+        Сегодня мы будем повторять ранее\n
+        изученные Вами слова </string>
+    <string name="lessonEnd14">Мы будем включать некоторые слова,\n
+        которые вы уже выучили, в последующие\n
+        Ваши уроки,  для повторения</string>
+    <string name="lessonEnd17">Статистика</string>
+    <string name="lessonEnd18">Контрольная работа!</string>
+    <string name="lessonEnd19">Мы будем проводить контрольные, по\n
+        итогу которых сможем определить на\n
+        сколько хорошо идет Ваше обучение</string>
+    <string name="lessonEnd20">Контрольная</string>
+    <string name="lessonEnd21">Контрольная завершена!</string>
+    <string name="lessonEnd22">Поздравляем! Контрольная пройдена\n, Вы можете продолжить изучение\n
+        новых слов</string>
+
+
+
+    <string name="dialog1">Вы уверенны, что хотите прервать урок?</string>
+    <string name="dialog2">Да</string>
+    <string name="dialog3">Нет</string>
+    <string name="dialog4">Мы рекомендуем проходить\n
+        по 1 уроку в день. Вы уверены,\n
+        что хотите начать следующий\n
+        урок сегодня?
+    </string>
 
 
     <string name="theme3"> УЧИТЬ</string>
-    <string name="theme4"> xx \nвремени</string>
-    <string name="theme5"> xx \nизучено</string>
-    <string name="theme6"> xx \nслов</string>
+    <string name="theme4">" мин\nвремени"</string>
+    <string name="theme5"> %\nизучено</string>
+    <string name="theme6"> \nслов</string>
     <string name="theme7">убрать из обучения</string>
-    <string name="theme8">Ознакомьтесь со словами и перейдите к обучению</string>
+    <string name="theme8">ознакомьтесь со словами\n и перейдите к основному обучению</string>
     <string name="theme9">ОТКРЫТЬ ВСЕ</string>
     <string name="theme10">CКРЫТЬ ВСЕ</string>
     <string name="theme11">УРОК №</string>
@@ -35,26 +116,28 @@
 
 
     <string name="themeMain1">Человек</string>
-    <string name="themeNumber1">98</string>
+    <string name="themeNumber1">96</string>
     <string name="themeMain2">Здоровье</string>
     <string name="themeNumber2">26</string>
     <string name="themeMain3">Семья</string>
-    <string name="themeNumber3">20</string>
+    <string name="themeNumber3">17</string>
     <string name="themeMain4">Дом</string>
-    <string name="themeNumber4">118</string>
+    <string name="themeNumber4">112</string>
     <string name="themeMain5">Путешествия</string>
-    <string name="themeNumber5">60</string>
+    <string name="themeNumber5">77</string>
     <string name="themeMain6">Размеры</string>
-    <string name="themeNumber6">20</string>
+    <string name="themeNumber6">18</string>
     <string name="themeMain7">Еда</string>
-    <string name="themeNumber7">124</string>
+    <string name="themeNumber7">123</string>
     <string name="themeMain8">Природа</string>
-    <string name="themeNumber8">61</string>
+    <string name="themeNumber8">60</string>
     <string name="themeMain9">Цвета</string>
     <string name="themeNumber9">61</string>
     <string name="themeMain10">Одежда</string>
     <string name="themeNumber10">45</string>
     <string name="themeMain11">Животные</string>
     <string name="themeNumber11">153</string>
+    <string name="themeMain12">Глаголы действия</string>
+    <string name="themeNumber12">27</string>
 
 </resources>

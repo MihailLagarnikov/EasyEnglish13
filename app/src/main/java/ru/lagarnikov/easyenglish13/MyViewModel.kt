@@ -8,11 +8,13 @@ import androidx.lifecycle.ViewModel
 import ru.lagarnikov.easyenglish13.Room.AppDatabase
 import ru.lagarnikov.easyenglish13.Room.DataSql
 import ru.lagarnikov.easyenglish13.TestPresenter.MyLessonPresenter
+import ru.lagarnikov.easyenglish13.TestPresenter.MyTimer
 
 class MyViewModel():ViewModel() {
 
     private lateinit var db: AppDatabase
     val mPresenter=MyLessonPresenter(this)
+    private var mMyTimer: MyTimer=MyTimer("")
 
     private val nextFragmentName=MutableLiveData<Fragment>()
     private val nextWordSpeach=MutableLiveData<String>()
@@ -20,6 +22,7 @@ class MyViewModel():ViewModel() {
     private val visibleElements=MutableLiveData<DataVisibileView>()
     private val dataTopFragment=MutableLiveData<DataTopFragment>()
     private val visibliTopFragment=MutableLiveData<Boolean>()
+    private val visibliAdver=MutableLiveData<Boolean>()
 
     fun setNextFragmentName(newFragment: Fragment){
         nextFragmentName.value=newFragment
@@ -70,6 +73,14 @@ class MyViewModel():ViewModel() {
         dataTopFragment.value=dataTop
     }
 
+    fun getVisibAdver(): LiveData<Boolean> {
+        return visibliAdver
+    }
+
+    fun setVisibleAdver(vis:Boolean){
+        visibliAdver.value=vis
+    }
+
 
 
     fun createDB(application:Application, tableName:String){
@@ -90,6 +101,21 @@ class MyViewModel():ViewModel() {
         db.sqlDao().replaseData(newDataSql)
     }
 
+    fun startTimer(themeName:String){
+        mMyTimer=MyTimer(themeName)
+        mMyTimer.timerStart()
+    }
 
+    fun stopTimer(){
+        try {
+            mMyTimer.timerStop()
+        } catch (e: Exception) {
+            //значит таймера еще не существует, ни чего страшного)
+        }
+    }
 
+    override fun onCleared() {
+        super.onCleared()
+        stopTimer()
+    }
 }

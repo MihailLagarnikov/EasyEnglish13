@@ -9,9 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import ru.lagarnikov.easyenglish13.*
-import ru.lagarnikov.easyenglish13.Theme.getOneThemeData
 import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.AdapterRecLessonWords
-import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.AdapterRecOneTheme
 import ru.lagarnikov.easyenglish13.databinding.FragmentWordsLessonBinding
 
 class FragmentLessonWord : Fragment(),View.OnClickListener {
@@ -41,16 +39,21 @@ class FragmentLessonWord : Fragment(),View.OnClickListener {
             //создаем новый урок
             numLesStr = resources.getString(R.string.theme11 ) + (numLes + 1).toString()
         }
-        mModel.mPresenter.createOreReadLesson(mThemeName)
+        mModel.mPresenter.createOrReadLesson(mThemeName)
 
 
         binding.recLessonWords.setLayoutManager(GridLayoutManager(context, 1))
-        mAdapter=AdapterRecLessonWords(mModel.mPresenter.getCurentLessonWords(),mModel,true)
+        val ddatta=mModel.mPresenter.getCurentLessonWords()
+        mAdapter=AdapterRecLessonWords(ddatta,mModel,true)
+        InnerData.saveInt(NUMBER_WORDS_IN_LESSON,ddatta.size)
         binding.recLessonWords.adapter = mAdapter
         binding.textViewLessonNumberX.setText(numLesStr)
 
-        binding.cardStartLesson.setOnClickListener(this)
+        binding.buttonStartStudy.setOnClickListener(this)
         binding.cardView3.setOnClickListener(this)
+        binding.imageView19.setOnClickListener(this)
+
+        mModel.setVisibleAdver(false)
 
 
         return myView
@@ -67,8 +70,16 @@ class FragmentLessonWord : Fragment(),View.OnClickListener {
                     binding.textView6.text=resources.getString(R.string.theme9)
                 }
             }
-            binding.cardStartLesson ->{
-                mModel.setNextFragmentName( mModel.mPresenter.getFragmentTestType())}
+            binding.buttonStartStudy -> {
+                InnerData.saveInt(STATUS_PROGRAMM, STATUS_2)
+                InnerData.saveInt(TIMER_LESSON,0)
+                mModel.setNextFragmentName(mModel.mPresenter.getFragmentTestType())
+                mModel.startTimer(mThemeName)
+            }
+            binding.imageView19 ->{
+                mModel.setNextFragmentName(FragmentThemeWord())
+                InnerData.saveInt(STATUS_PROGRAMM, STATUS_3)
+            }
         }
     }
 }

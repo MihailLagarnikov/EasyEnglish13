@@ -6,11 +6,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import ru.lagarnikov.easyenglish13.*
 import ru.lagarnikov.easyenglish13.TestPresenter.MyLessonPresenter
 import ru.lagarnikov.easyenglish13.databinding.FragmentMidleTestABBinding
+import android.app.Activity
+import android.view.inputmethod.InputMethodManager
+import androidx.core.content.ContextCompat.getSystemService
+
+
 
 @SuppressLint("ValidFragment")
 open class TestA @SuppressLint("ValidFragment") constructor
@@ -55,10 +61,25 @@ open class TestA @SuppressLint("ValidFragment") constructor
         binding.imageSaundMainTestAB.setOnClickListener(this)
         startSpeachTestB()
         setDataTopFr()
+        try {
+            val inputMethodManager = activity!!.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(activity!!.getCurrentFocus().getWindowToken(), 0)
+        } catch (e: Exception) {
+            //ошибочка и ни чего)
+        }
 
+
+        chitTest()
+
+        mModel.setVisibleAdver(true)
 
 
         return myView
+    }
+
+    private fun chitTest(){
+        mDataVisibile.answerTrue=true
+        answerDone()
     }
 
     private fun setDataTopFr(){
@@ -68,6 +89,8 @@ open class TestA @SuppressLint("ValidFragment") constructor
             mModel.setDataTopFragment(dataTop)
         } catch (e: Exception) {
             //значит ыерхний фрагмент еще не созданн, ни чего страшного)
+            val s=e.toString()
+            val d=0
         }
     }
 

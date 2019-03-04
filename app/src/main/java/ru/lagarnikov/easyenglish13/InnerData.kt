@@ -21,7 +21,7 @@ class InnerData private  constructor(val pref:SharedPreferences){
 
 
         fun loadText(key:String):String{
-            return curentInnerData.pref.getString(key ,"") ?:""
+            return curentInnerData.pref.getString(key ," ") ?:" "
         }
 
         fun saveBoolean(key:String, value:Boolean){
@@ -42,6 +42,16 @@ class InnerData private  constructor(val pref:SharedPreferences){
 
         fun loadInt(key:String):Int{
             return curentInnerData.pref.getInt(key,0)
+        }
+
+        fun saveFloat(key:String,number:Float){
+            val editor = curentInnerData.pref.edit()
+            editor.putFloat(key, number)
+            editor.apply()
+        }
+
+        fun loadFloat(key:String):Float{
+            return curentInnerData.pref.getFloat(key,0F)
         }
 
     }

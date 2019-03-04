@@ -46,8 +46,19 @@ open class TestD @SuppressLint("ValidFragment") constructor
         callKeyboard()
         setDataTopFr()
 
+
+        chitTest()
+
+        mModel.setVisibleAdver(true)
+
         return myView
     }
+
+    private fun chitTest(){
+        mDataVisibile.answerTrue=true
+        answerDone(true)
+    }
+
 
     private fun setDataTopFr(){
         try {

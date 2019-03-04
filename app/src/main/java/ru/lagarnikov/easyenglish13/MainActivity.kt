@@ -3,11 +3,11 @@ package ru.lagarnikov.easyenglish13
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -16,12 +16,12 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import ru.lagarnikov.easyenglish13.Room.DataSql
-import ru.lagarnikov.easyenglish13.Theme.Travel
-import ru.lagarnikov.easyenglish13.View.FragmentCreateCourse
-import ru.lagarnikov.easyenglish13.View.FragmentTop
+import ru.lagarnikov.easyenglish13.View.*
 import ru.lagarnikov.easyenglish13.databinding.ActivityMainBinding
 import java.util.*
+import android.view.ViewGroup
+
+
 
 class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
@@ -33,17 +33,24 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     private var mLastSpeachWords=""
     lateinit var binding:ActivityMainBinding
     private var mTopFragmentExist=false
+    private var mTopFragmentChange=false
+    private var mStatusAdver=false
+    private lateinit var mFragmentTop:FragmentTop
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main)
+        mAdView=binding.adView
+        MobileAds.initialize(this, "ca-app-pub-2421174998731562~1772735539");
 
         createInnerData()
         mModel =  ViewModelProviders.of(this).get(MyViewModel()::class.java)
         createVisibleTopFragmentObserver()
         startBannerAdver()
-        createStartFragmen()
         createNextFragmentObserver()
+        createSplashScrin()
+        createVisibleAdvweObserver()
         mTextSpeech=TextToSpeech(this,this);
         createTextSpeachObserver()
 
@@ -52,18 +59,46 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
 
 
+
+    private fun  createSplashScrin(){
+        Thread.sleep(1500)
+        createStartFragmen()
+    }
     private fun createStartFragmen(){
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.frameMidle, FragmentCreateCourse())
-        fragmentTransaction.commit()
+        when(InnerData.loadInt(STATUS_PROGRAMM)){
+            STATUS_1 -> {
+                mModel.setNextFragmentName(FragmentEndLesson())
+                mModel.createDB(application,InnerData.loadText(THEME_CURENT))
+            }
+            STATUS_2 ->{
+                mModel.setNextFragmentName(FragmentEndLesson())
+                InnerData.saveBoolean(CONTIN_LESSON, true)
+                mModel.createDB(application, InnerData.loadText(THEME_CURENT))
+            }
+            STATUS_3 -> mModel.setNextFragmentName(FragmentChooseTheme())
+            0 -> {
+                if (InnerData.loadInt(CURENT_COURSE)==0){
+                    mModel.setNextFragmentName(FragmentCreateCourseA())
+                }else if (InnerData.loadInt(CURENT_NUMBER_WARDS)==0){
+                    mModel.setNextFragmentName(FragmentCreateCourseB())
+                }else{
+                    mModel.setNextFragmentName(FragmentChooseTheme())
+                }
+            }
+
+
+        }
     }
 
     private fun createTopFragmen(){
         if (!mTopFragmentExist) {
+            mFragmentTop=FragmentTop(mModel.mPresenter)
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.add(R.id.frameTop, FragmentTop(mModel.mPresenter))
+            fragmentTransaction.add(R.id.frameTop, mFragmentTop)
             fragmentTransaction.commit()
             mTopFragmentExist=true
+        }else{
+            mFragmentTop.refreshData()
         }
     }
 
@@ -74,9 +109,13 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     private fun doVisibileTopFragment(visib:Boolean){
         if (visib){
             binding.frameTop.visibility=View.VISIBLE
-            createTopFragmen()
+            if (mTopFragmentChange) {
+                createTopFragmen()
+                mTopFragmentChange=false
+            }
         }else{
             binding.frameTop.visibility=View.GONE
+            mTopFragmentChange=true
         }
     }
 
@@ -95,16 +134,35 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     }
 
     private fun createVisibleTopFragmentObserver(){
-        val visObs= Observer<Boolean> { newBool -> doVisibileTopFragment(newBool)  }
+        val visObs= Observer<Boolean> { newBool ->
+            doVisibileTopFragment(newBool)  }
         mModel.getVisibleTopFragment().observe(this,visObs)
     }
 
+    private fun createVisibleAdvweObserver(){
+        val visADv= Observer<Boolean> { newBool ->
+        if (newBool){
+            startBannerAdver()
+        }else{
+            stopBannerAdver()
+        }}
+        mModel.getVisibleTopFragment().observe(this,visADv)
+    }
 
     private fun startBannerAdver(){
-        mAdView=findViewById(R.id.adView)
-        MobileAds.initialize(this, "ca-app-pub-2421174998731562~1772735539");
-        mAdView.loadAd(AdRequest.Builder().build())
+        if (!mStatusAdver) {
+            mAdView.visibility=View.VISIBLE
+            mAdView.loadAd(AdRequest.Builder().build())
+            mStatusAdver=true
+        }
 
+    }
+
+    private fun stopBannerAdver(){
+        if (mStatusAdver) {
+            mAdView.visibility=View.GONE
+            mStatusAdver=false
+        }
     }
 
     private fun callFragmentFinish(fragment: Fragment){

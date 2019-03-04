@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.AppBarLayout
 import ru.lagarnikov.easyenglish13.*
 import ru.lagarnikov.easyenglish13.Room.DataSql
-import ru.lagarnikov.easyenglish13.Theme.Travel
-import ru.lagarnikov.easyenglish13.Theme.getAllThemeData
-import ru.lagarnikov.easyenglish13.Theme.getOneThemeData
+import ru.lagarnikov.easyenglish13.Theme.*
 import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.AdapterRecOneTheme
 import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.AdapterRecTheme
 import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.DecoratorRecyclerView
@@ -39,18 +37,39 @@ class FragmentThemeWord:Fragment(),View.OnClickListener {
         binding.textViewThemeName.setText(mThemeName)
         binding.buttonStartStudy.setOnClickListener(this)
         binding.buttonStartStudyTop.setOnClickListener(this)
+        binding.imageView9.setOnClickListener(this)
+        setDataProgress()
+        binding.imageView16.setImageResource(getUpFotoThemeWord(mThemeName,resources))
+        binding.imageView10.setImageResource(getDownFotoThemeWord(mThemeName,resources))
+
+
+
+        mModel.setVisibleAdver(false)
 
 
         return myView
     }
 
+    private fun setDataProgress(){
+
+        val progrStr=InnerData.loadFloat(CHOOSE_THEME_PROGRESS_PROCENT + mThemeName).toString()
+        val textProsOkr=progrStr.toString().substring(0,progrStr.toString().indexOf("."))
+        binding.textViewProgressThemeOne.text=textProsOkr+ resources.getString(R.string.theme5)
+
+        val progrWordStr=InnerData.loadInt(CHOOSE_THEME_PROGRESS_WORD  + mThemeName).toString()
+        binding.textViewNumberWordThemeOne.text=progrWordStr + resources.getString(R.string.theme6)
+
+        val timeTheme=InnerData.loadInt(TIMER_Theme + mThemeName).toString()
+        binding.textViewTimeThemeOne.text=timeTheme + resources.getString(R.string.theme4)
+    }
+
     override fun onClick(v: View?) {
         when(v){
-            binding.buttonStartStudy -> {
+            binding.buttonStartStudy,binding.buttonStartStudyTop -> {
                 getDb()
                 mModel.setNextFragmentName(FragmentLessonWord())
             }
-            binding.buttonStartStudyTop -> mModel.setNextFragmentName(FragmentChooseTheme())
+            binding.imageView9 -> mModel.setNextFragmentName(FragmentChooseTheme())
         }
     }
 
@@ -59,13 +78,13 @@ class FragmentThemeWord:Fragment(),View.OnClickListener {
         val cc=mModel.getListDataSqlTest()
         if (cc.size<2) {
             val newListDataSql=arrayListOf<DataSql>()
-            val travel= Travel()
+            val listData= getOneThemeData(mThemeName, resources)
             var n=1
-            for (data in travel.getListData()){
+            for (data in listData){
                 newListDataSql.add(
-                    DataSql(n,data.answerWords,data.words, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE,
+                    DataSql(n,data.english,data.rus, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE, DB_FALSE,
                         0,0,0,0,0,0,0,
-                        STATE_NOT_STUDIED
+                        STATE_NOT_STUDIED,""
                     )
                 )
                 n++

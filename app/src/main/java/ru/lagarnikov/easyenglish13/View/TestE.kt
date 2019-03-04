@@ -1,10 +1,13 @@
 package ru.lagarnikov.easyenglish13.View
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -37,9 +40,19 @@ open class TestE @SuppressLint("ValidFragment") constructor
         binding.mVisibile= mDataVisibile
         mModel.setVisibleElements(mDataVisibile)
         binding.textViewNextTectE.setOnClickListener(this)
-        binding.imageView4.setOnClickListener(this)
+        binding.floatingActionButtonMicrofone.setOnClickListener(this)
+        binding.imageView5.setOnClickListener(this)
         setDataTopFr()
         createObservUserSpeak()
+        try {
+            val inputMethodManager = activity!!.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(activity!!.getCurrentFocus().getWindowToken(), 0)
+        } catch (e: Exception) {
+            //ошибочка и ни чего)
+
+
+        }
+        mModel.setVisibleAdver(true)
 
 
 
@@ -78,14 +91,19 @@ open class TestE @SuppressLint("ValidFragment") constructor
     override fun onClick(v: View?) {
 
         when(v){
-            binding.textViewNextTectE -> answerDone(false)
-            binding.imageView4 -> callMicrophone()
+            binding.textViewNextTectE -> answerDone(true)
+            binding.floatingActionButtonMicrofone, binding.imageView5 -> {
+                callMicrophone()
+                binding.textViewNextTectE.setText(resources.getString(R.string.testE3))
+
+            }
 
         }
     }
 
     private fun chaecAnswer(text:String){
-        if (text.equals(mCurentDataTest.titleEn)){
+        val answerText:String=text.toLowerCase()
+        if (answerText.equals(mCurentDataTest.titleEn)){
             answerDone(true)
         }else{
             answerDone(false)

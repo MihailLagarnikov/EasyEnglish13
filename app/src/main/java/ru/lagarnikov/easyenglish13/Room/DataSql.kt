@@ -24,8 +24,9 @@ class DataSql (@PrimaryKey(autoGenerate = true)  var id: Int?,
                @ColumnInfo(name = "errorC") var errorC:Int,
                @ColumnInfo(name = "errorD") var errorD:Int,
                @ColumnInfo(name = "errorE") var errorE:Int,
-               @ColumnInfo(name = "state") var state:Int) {
+               @ColumnInfo(name = "state") var state:Int,
+               @ColumnInfo(name = "data") var dataStyd:String){
     constructor():this(null,"","",0,0,0,0,0,0,0,
-        0,0,0,0,0,0,0)}
+        0,0,0,0,0,0,0,"")}
 
 

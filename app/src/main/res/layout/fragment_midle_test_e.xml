@@ -30,7 +30,8 @@
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"/>
     <ImageView
             android:layout_width="0dp"
             android:layout_height="2dp" app:srcCompat="@drawable/divider_a"
@@ -46,7 +47,8 @@
             style="@style/text48colorWhite"
             android:id="@+id/textTrueAnswerE" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="4dp" app:layout_constraintBottom_toBottomOf="@+id/imageDivider1"/>
+            android:layout_marginBottom="4dp" app:layout_constraintBottom_toBottomOf="@+id/imageDivider1"
+            android:fontFamily="@font/roboto_medium"/>
     <ImageView
             android:visibility="@{!mVisibile.answerNotDone ? View.GONE :(mVisibile.answerTrue ? View.VISIBLE : View.GONE )}"
             android:layout_width="24dp"
@@ -82,28 +84,24 @@
             android:id="@+id/textViewNextTectE"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
-    <ImageView
-            android:layout_width="88dp"
-            android:layout_height="88dp" app:srcCompat="@drawable/oval"
-            android:id="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/imageDivider2" android:layout_marginTop="60dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonMicrofone"
+            android:fontFamily="@font/roboto" android:textColor="@color/colorTextMain"/>
     <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp" app:srcCompat="@drawable/microphone"
+            android:elevation="12dp"
             android:id="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="@+id/imageView4" app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"/>
+            app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonMicrofone"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButtonMicrofone"
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButtonMicrofone"
+            app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonMicrofone"/>
     <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@+id/imageDivider1"
             app:layout_constraintBottom_toTopOf="@+id/imageDivider2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/cardView5">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:background="@{!mVisibile.answerNotDone ? @color/colorBacgroundTest :(mVisibile.answerTrue ? @color/colorAnswerTrue : @color/colorAnswerFalse )}"
                 android:layout_width="match_parent"
@@ -120,10 +118,19 @@
                     app:layout_constraintTop_toBottomOf="parent"
                     android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"/>
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="parent"
+                    android:fontFamily="@font/roboto"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:clickable="true"
+            app:backgroundTint="@color/colorMicrofonFon"
+            android:id="@+id/floatingActionButtonMicrofone" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/cardView5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

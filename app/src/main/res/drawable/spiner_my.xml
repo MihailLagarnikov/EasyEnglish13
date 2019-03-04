@@ -4,13 +4,13 @@
                  android:pivotY="50%" >
 
     <shape
-            android:innerRadiusRatio="3"
+            android:innerRadiusRatio="2.6"
             android:shape="ring"
-            android:thicknessRatio="22"
+            android:thicknessRatio="14"
             android:useLevel="false" >
         <size
-                android:height="24dp"
-                android:width="24dp" />
+                android:height="60dp"
+                android:width="60dp" />
 
         <gradient
                 android:centerColor="@android:color/white"

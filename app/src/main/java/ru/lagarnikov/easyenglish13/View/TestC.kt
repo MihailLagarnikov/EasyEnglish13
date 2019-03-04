@@ -46,7 +46,17 @@ open class TestC @SuppressLint("ValidFragment") constructor
         binding.textViewHintTestCD.setOnClickListener(this)
         setDataTopFr()
 
+
+        chitTest()
+
+        mModel.setVisibleAdver(true)
+
         return myView
+    }
+
+    private fun chitTest(){
+        mDataVisibile.answerTrue=true
+        answerDone(true)
     }
 
     private fun setDataTopFr(){

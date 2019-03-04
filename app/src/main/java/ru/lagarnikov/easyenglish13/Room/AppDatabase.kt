@@ -15,11 +15,14 @@ abstract class AppDatabase:RoomDatabase() {
     private var INSTANCE: AppDatabase? = null
 
 
+
     companion object {
         private var INSTANCE: AppDatabase? = null
+        private var lastTableName:String=""
 
         fun getInstance(context: Context, tableName:String): AppDatabase? {
-            if (INSTANCE == null) {
+            if (INSTANCE == null || !tableName.equals(lastTableName)) {
+                lastTableName=tableName
 
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                         AppDatabase::class.java, tableName)

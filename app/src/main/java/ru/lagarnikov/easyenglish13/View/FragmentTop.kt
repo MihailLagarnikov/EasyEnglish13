@@ -1,6 +1,7 @@
 package ru.lagarnikov.easyenglish13.View
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.graphics.Point
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -15,6 +16,11 @@ import androidx.lifecycle.ViewModelProviders
 import ru.lagarnikov.easyenglish13.*
 import ru.lagarnikov.easyenglish13.TestPresenter.MyLessonPresenter
 import ru.lagarnikov.easyenglish13.databinding.FragmentTopBinding
+import android.widget.Toast
+import android.content.DialogInterface
+import ru.lagarnikov.easyenglish13.Theme.getAllThemeData
+import ru.lagarnikov.easyenglish13.Theme.getOrangeFotoTopFragment
+
 
 @SuppressLint("ValidFragment")
 class FragmentTop @SuppressLint("ValidFragment") constructor
@@ -35,13 +41,34 @@ class FragmentTop @SuppressLint("ValidFragment") constructor
         createObserverVisibleView()
         binding.mVisibile=mVisibile
         mDataTop=mModel.mPresenter.getTopFragmentDate()
+        mModel.setDataTopFragment(mDataTop)
         binding.mData=mDataTop
 
         binding.constrFragmentTop.setOnClickListener(this)
+        binding.frameBack.setOnClickListener(this)
         createProgressLine()
         createObserverDataTop()
+        setBackgroundImage()
 
         return myView
+    }
+
+    fun refreshData(){
+        mDataTop=mModel.mPresenter.getTopFragmentDate()
+        mModel.setDataTopFragment(mDataTop)
+        binding.mData=mDataTop
+        setBackgroundImage()
+    }
+
+    private fun setBackgroundImage(){
+        val data= getAllThemeData()
+        for(i in 0 until data.size){
+            val ss:String=resources.getString(data.get(i).themeName).toUpperCase()
+            if (mDataTop.theneName.toUpperCase().equals(ss)){
+                binding.imageCurentTheme.setImageResource(getOrangeFotoTopFragment().get(i))
+            }
+        }
+
     }
 
     private fun createObserverVisibleView(){
@@ -59,7 +86,8 @@ class FragmentTop @SuppressLint("ValidFragment") constructor
     }
 
     private fun createObserverDataTop(){
-        val data= Observer<DataTopFragment> {newData ->changeTextHint(newData.typeTest) }
+        val data= Observer<DataTopFragment> {newData ->changeTextHint(newData.typeTest)
+        createProgressLine()}
         mModel.getDataTopFragment().observe(this,data)
     }
 
@@ -107,14 +135,29 @@ class FragmentTop @SuppressLint("ValidFragment") constructor
                 }
                 mTimerPause=!mTimerPause
             }
+        }else if (v==binding.frameBack){
+            //возможно пользователь хочет прервать курс... надо спросить его об этом
+            createDilogAboutExitLesson()
         }
+    }
+
+    private fun createDilogAboutExitLesson(){
+        val dialog=AlertDialog.Builder(context)
+        dialog.setMessage(resources.getString(R.string.dialog1))
+        dialog.setPositiveButton(resources.getString(R.string.dialog2), object : DialogInterface.OnClickListener {
+            override fun onClick(dialog: DialogInterface, arg1: Int) {
+                //выход из урока
+                mModel.setNextFragmentName(FragmentThemeWord())
+                InnerData.saveInt(STATUS_PROGRAMM, STATUS_3)
+            }
+        });
+        dialog.setNegativeButton(resources.getString(R.string.dialog3),null)
+        dialog.show()
     }
 
 
     //линия прогресса обучения и текст
     private fun createProgressLine(){
-        val lineProgA=binding.imageViewProgressLineTop
-        val lineProgB=binding.imageViewProgressLineBottom
 
          val mCOnstrProgress=binding.constrFragmentTop
          val set= ConstraintSet()
@@ -123,9 +166,17 @@ class FragmentTop @SuppressLint("ValidFragment") constructor
          val point= Point()
          display?.getSize(point)
          val weigtScrin=point.x
-         val curentPr=(weigtScrin  /mPresenter.getMaxProgress())*mPresenter.getCurentProgress()
-         set.constrainWidth(R.id.imageViewProgressLineTop,curentPr)
+        var dda=mPresenter.getMaxProgress()
+        if (dda==0){
+            dda=1
+        }
+        val fss2:Float= (weigtScrin/mPresenter.getMaxProgress()).toFloat()
+        val fss:Float= mPresenter.getCurentProgress().toFloat()*fss2
+        val dd:Int= fss.toInt()
+         set.constrainWidth(R.id.imageViewProgressLineTop,dd)
          set.applyTo(mCOnstrProgress)
+
+
     }
 
 

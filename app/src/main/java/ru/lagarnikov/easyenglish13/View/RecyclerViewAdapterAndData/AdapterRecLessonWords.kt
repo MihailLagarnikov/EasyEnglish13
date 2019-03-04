@@ -14,10 +14,15 @@ import ru.lagarnikov.easyenglish13.R
 import ru.lagarnikov.easyenglish13.Room.DataSql
 import ru.lagarnikov.easyenglish13.databinding.ItemLessonWordcBinding
 
-class AdapterRecLessonWords(val list:ArrayList<DataSql>, val mModel: MyViewModel, var openTranslate:Boolean):
+class AdapterRecLessonWords(var list:ArrayList<DataSql>, val mModel: MyViewModel, var openTranslate:Boolean):
     RecyclerView.Adapter<AdapterRecLessonWords.ViewHolder>() {
 
     lateinit var binding:ItemLessonWordcBinding
+
+    fun refreshData(newData:ArrayList<DataSql>){
+        list=newData
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterRecLessonWords.ViewHolder {
 

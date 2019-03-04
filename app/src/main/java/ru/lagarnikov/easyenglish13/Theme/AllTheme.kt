@@ -7,20 +7,104 @@ import ru.lagarnikov.easyenglish13.View.RecyclerViewAdapterAndData.DataOneTheme
 
 fun getAllThemeData():ArrayList<DataAllTheme>{
     var dataTheme= arrayListOf<DataAllTheme>()
-    dataTheme.add(DataAllTheme(R.string.themeMain1,R.string.themeNumber1, R.drawable.health_aa))
+    dataTheme.add(DataAllTheme(R.string.themeMain1,R.string.themeNumber1, R.drawable.ic_human_a))
     dataTheme.add(DataAllTheme(R.string.themeMain2,R.string.themeNumber2, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain3,R.string.themeNumber3, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain4,R.string.themeNumber4, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain5,R.string.themeNumber5, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain6,R.string.themeNumber6, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain7,R.string.themeNumber7, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain8,R.string.themeNumber8, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain9,R.string.themeNumber9, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain10,R.string.themeNumber10, R.drawable.health_aa))
-    dataTheme.add(DataAllTheme(R.string.themeMain11,R.string.themeNumber11, R.drawable.health_aa))
+    dataTheme.add(DataAllTheme(R.string.themeMain3,R.string.themeNumber3, R.drawable.ic_family_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain4,R.string.themeNumber4, R.drawable.ic_house_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain5,R.string.themeNumber5, R.drawable.ic_travel_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain6,R.string.themeNumber6, R.drawable.ic_size_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain7,R.string.themeNumber7, R.drawable.ic_food_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain8,R.string.themeNumber8, R.drawable.ic_natura_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain9,R.string.themeNumber9, R.drawable.ic_colore_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain10,R.string.themeNumber10, R.drawable.ic_clothes_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain11,R.string.themeNumber11, R.drawable.ic_animal_a))
+    dataTheme.add(DataAllTheme(R.string.themeMain12,R.string.themeNumber12, R.drawable.ic_act_a))
 
 
     return dataTheme
+}
+
+
+//Ораньжевые фотки на фрагмент выбора темы, когда тема изучается(или изучилась) она ораньжеветт
+fun getOrangeFoto():ArrayList<Int>{
+    val dataOrangeFoto= arrayListOf<Int>()
+    dataOrangeFoto.add(R.drawable.ic_humana_or)
+    dataOrangeFoto.add(R.drawable.ic_healtha_or)
+    dataOrangeFoto.add(R.drawable.ic_familya_or)
+    dataOrangeFoto.add(R.drawable.ic_housea_or)
+    dataOrangeFoto.add(R.drawable.ic_travela_or)
+    dataOrangeFoto.add(R.drawable.ic_sizea_or)
+    dataOrangeFoto.add(R.drawable.ic_fooda_or)
+    dataOrangeFoto.add(R.drawable.ic_naturaa_or)
+    dataOrangeFoto.add(R.drawable.ic_colorea_or)
+    dataOrangeFoto.add(R.drawable.ic_clothesa_or)
+    dataOrangeFoto.add(R.drawable.ic_animala_or)
+    dataOrangeFoto.add(R.drawable.ic_acta_or)
+
+    return dataOrangeFoto
+}
+
+//Ораньжевые фотки на TopFragment
+fun getOrangeFotoTopFragment():ArrayList<Int>{
+    val dataOrangeFoto= arrayListOf<Int>()
+    dataOrangeFoto.add(R.drawable.ic_human_c)
+    dataOrangeFoto.add(R.drawable.health_c)
+    dataOrangeFoto.add(R.drawable.ic_family_c)
+    dataOrangeFoto.add(R.drawable.ic_house_c)
+    dataOrangeFoto.add(R.drawable.ic_travel_c)
+    dataOrangeFoto.add(R.drawable.ic_size_c)
+    dataOrangeFoto.add(R.drawable.ic_food_c)
+    dataOrangeFoto.add(R.drawable.ic_natura_c)
+    dataOrangeFoto.add(R.drawable.ic_colore_c)
+    dataOrangeFoto.add(R.drawable.ic_clothes_c)
+    dataOrangeFoto.add(R.drawable.ic_animal_c)
+    dataOrangeFoto.add(R.drawable.ic_act_c)
+
+    return dataOrangeFoto
+}
+
+fun getUpFotoThemeWord(themeName:String, resources: Resources):Int{
+    when(themeName){
+        resources.getString(R.string.themeMain1).toUpperCase() -> return R.drawable.ic_human_b_a
+        resources.getString(R.string.themeMain2).toUpperCase() -> return R.drawable.ic_health_b_a
+        resources.getString(R.string.themeMain3).toUpperCase() -> return R.drawable.ic_family_b_a
+        resources.getString(R.string.themeMain4).toUpperCase() -> return R.drawable.ic_house_b_a
+        resources.getString(R.string.themeMain5).toUpperCase() -> return R.drawable.ic_travel_b_a
+        resources.getString(R.string.themeMain6).toUpperCase() -> return R.drawable.ic_size_b_a
+        resources.getString(R.string.themeMain7).toUpperCase() -> return R.drawable.ic_food_b_a
+        resources.getString(R.string.themeMain8).toUpperCase() -> return R.drawable.ic_natura_b_a
+        resources.getString(R.string.themeMain9).toUpperCase() -> return R.drawable.ic_colore_b_a
+        resources.getString(R.string.themeMain10).toUpperCase() -> return R.drawable.ic_clothes_b_a
+        resources.getString(R.string.themeMain11).toUpperCase() -> return R.drawable.ic_animal_b_a
+        resources.getString(R.string.themeMain12).toUpperCase() -> return R.drawable.ic_act_b_a
+    }
+
+    return 0
+
+
+
+}
+
+fun getDownFotoThemeWord(themeName:String, resources: Resources):Int{
+    when(themeName){
+        resources.getString(R.string.themeMain1).toUpperCase() -> return R.drawable.ic_human_b_b
+        resources.getString(R.string.themeMain2).toUpperCase() -> return R.drawable.ic_health_b_b
+        resources.getString(R.string.themeMain3).toUpperCase() -> return R.drawable.ic_family_b_b
+        resources.getString(R.string.themeMain4).toUpperCase() -> return R.drawable.ic_house_b_b
+        resources.getString(R.string.themeMain5).toUpperCase() -> return R.drawable.ic_travel_b_b
+        resources.getString(R.string.themeMain6).toUpperCase() -> return R.drawable.ic_size_b_b
+        resources.getString(R.string.themeMain7).toUpperCase() -> return R.drawable.ic_food_b_b
+        resources.getString(R.string.themeMain8).toUpperCase() -> return R.drawable.ic_natura_b_b
+        resources.getString(R.string.themeMain9).toUpperCase() -> return R.drawable.ic_colore_b_b
+        resources.getString(R.string.themeMain10).toUpperCase() -> return R.drawable.ic_clothes_b_b
+        resources.getString(R.string.themeMain11).toUpperCase() -> return R.drawable.ic_animal_b_b
+        resources.getString(R.string.themeMain12).toUpperCase() -> return R.drawable.ic_act_b_b
+    }
+
+    return 0
+
+
+
 }
 
 fun getOneThemeData(themeName:String, resources: Resources):ArrayList<DataOneTheme>{
@@ -36,6 +120,7 @@ fun getOneThemeData(themeName:String, resources: Resources):ArrayList<DataOneThe
         resources.getString(R.string.themeMain9).toUpperCase() -> return get9ThemeData()
         resources.getString(R.string.themeMain10).toUpperCase() -> return get10ThemeData()
         resources.getString(R.string.themeMain11).toUpperCase() -> return get11ThemeData()
+        resources.getString(R.string.themeMain12).toUpperCase() -> return get12ThemeData()
     }
 
     return get1ThemeData()
@@ -51,13 +136,11 @@ private fun get1ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("body","тело"))
     dataTheme.add(DataOneTheme("head","голова"))
     dataTheme.add(DataOneTheme("shoulder","плечо"))
-    dataTheme.add(DataOneTheme("arm","рука"))
     dataTheme.add(DataOneTheme("hand","рука "))
     dataTheme.add(DataOneTheme("elbow","локоть"))
     dataTheme.add(DataOneTheme("chest","грудная клетка"))
     dataTheme.add(DataOneTheme("stomach","живот"))
     dataTheme.add(DataOneTheme("back","спина"))
-    dataTheme.add(DataOneTheme("bottom","задница"))
     dataTheme.add(DataOneTheme("thigh","бедро"))
     dataTheme.add(DataOneTheme("waist","талия"))
     dataTheme.add(DataOneTheme("leg","нога"))
@@ -151,26 +234,26 @@ private fun get1ThemeData():ArrayList<DataOneTheme>{
 private fun get2ThemeData():ArrayList<DataOneTheme>{
     val dataTheme= arrayListOf<DataOneTheme>()
     dataTheme.add(DataOneTheme("health","здоровье"))
-    dataTheme.add(DataOneTheme("a allergy","аллергия"))
+    dataTheme.add(DataOneTheme("allergy","аллергия"))
     dataTheme.add(DataOneTheme("plaster","пластырь"))
-    dataTheme.add(DataOneTheme("a bloody nose","кровь из носа"))
-    dataTheme.add(DataOneTheme("a broken arm","сломанная рука"))
-    dataTheme.add(DataOneTheme("a bruise","синяк"))
-    dataTheme.add(DataOneTheme("a bump","шишка"))
-    dataTheme.add(DataOneTheme("a cough","кашель"))
-    dataTheme.add(DataOneTheme("a cut","порез"))
-    dataTheme.add(DataOneTheme("a diarrhea","диарея"))
-    dataTheme.add(DataOneTheme("a fever","жар"))
-    dataTheme.add(DataOneTheme("a headache","головная боль"))
-    dataTheme.add(DataOneTheme("a loose tooth","шатающийся зуб"))
+    dataTheme.add(DataOneTheme("bloody nose","кровь из носа"))
+    dataTheme.add(DataOneTheme("broken arm","сломанная рука"))
+    dataTheme.add(DataOneTheme("bruise","синяк"))
+    dataTheme.add(DataOneTheme("bump","шишка"))
+    dataTheme.add(DataOneTheme("cough","кашель"))
+    dataTheme.add(DataOneTheme("cut","порез"))
+    dataTheme.add(DataOneTheme("diarrhea","диарея"))
+    dataTheme.add(DataOneTheme("fever","жар"))
+    dataTheme.add(DataOneTheme("headache","головная боль"))
+    dataTheme.add(DataOneTheme("loose tooth","шатающийся зуб"))
     dataTheme.add(DataOneTheme("medicine","лекарство"))
-    dataTheme.add(DataOneTheme("a runny nose","насморк"))
-    dataTheme.add(DataOneTheme("a scratch","царапина"))
-    dataTheme.add(DataOneTheme("a shot","укол"))
+    dataTheme.add(DataOneTheme("runny nose","насморк"))
+    dataTheme.add(DataOneTheme("scratch","царапина"))
+    dataTheme.add(DataOneTheme("shot","укол"))
     dataTheme.add(DataOneTheme("sick","больной"))
     dataTheme.add(DataOneTheme("sneeze","чиханье"))
-    dataTheme.add(DataOneTheme("a stomachache","боль в животе"))
-    dataTheme.add(DataOneTheme("a sunburn","солнечный ожог"))
+    dataTheme.add(DataOneTheme("stomachache","боль в животе"))
+    dataTheme.add(DataOneTheme("sunburn","солнечный ожог"))
     dataTheme.add(DataOneTheme("thermometer","градусник"))
     dataTheme.add(DataOneTheme("throw up","тошнота"))
     dataTheme.add(DataOneTheme("toothache","зубная боль"))
@@ -193,9 +276,6 @@ private fun get3ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("brother","брат"))
     dataTheme.add(DataOneTheme("grandmother","бабушка"))
     dataTheme.add(DataOneTheme("grandfather","дедушка"))
-    dataTheme.add(DataOneTheme("grandparents","дедушка и бабушка"))
-    dataTheme.add(DataOneTheme("great-grandmother","прабабушка"))
-    dataTheme.add(DataOneTheme("great-grandfather","прадедушка"))
     dataTheme.add(DataOneTheme("grandson","внук"))
     dataTheme.add(DataOneTheme("granddaughter","внучка"))
     dataTheme.add(DataOneTheme("aunt","тётя"))
@@ -219,7 +299,7 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("doorbell","дверной звонок"))
     dataTheme.add(DataOneTheme("door","дверь"))
     dataTheme.add(DataOneTheme("upstairs","верхний этаж"))
-    dataTheme.add(DataOneTheme("downstairs","подвальный этаж"))
+    dataTheme.add(DataOneTheme("downstairs","подвал"))
     dataTheme.add(DataOneTheme("roof","крыша"))
     dataTheme.add(DataOneTheme("window","окно"))
     dataTheme.add(DataOneTheme("garage","гараж"))
@@ -231,7 +311,6 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("shower","душ"))
     dataTheme.add(DataOneTheme("stairs","лестница"))
     dataTheme.add(DataOneTheme("toilet","туалет"))
-    dataTheme.add(DataOneTheme("living room","гостиная"))
     dataTheme.add(DataOneTheme("sofa","диван"))
     dataTheme.add(DataOneTheme("armchair","кресло"))
     dataTheme.add(DataOneTheme("chair","стул"))
@@ -259,7 +338,6 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("toothbrush","зубная щётка"))
     dataTheme.add(DataOneTheme("toothpaste","зубная паста"))
     dataTheme.add(DataOneTheme("soap","мыло"))
-    dataTheme.add(DataOneTheme("shower","душ"))
     dataTheme.add(DataOneTheme("sponge","губка"))
     dataTheme.add(DataOneTheme("comb","расчёска"))
     dataTheme.add(DataOneTheme("razor","бритва"))
@@ -287,12 +365,10 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("sheet","простыня"))
     dataTheme.add(DataOneTheme("blanket","одеяло"))
     dataTheme.add(DataOneTheme("alarm clock","будильник"))
-    dataTheme.add(DataOneTheme("dishwasher","посудомоечная машина"))
-    dataTheme.add(DataOneTheme("faucet","водопроводный кран"))
     dataTheme.add(DataOneTheme("sink","раковина"))
     dataTheme.add(DataOneTheme("sponge","губка"))
     dataTheme.add(DataOneTheme("cabinet","шкаф с ящиками"))
-    dataTheme.add(DataOneTheme("microwave","микроволновая печь"))
+    dataTheme.add(DataOneTheme("microwave","микроволновка"))
     dataTheme.add(DataOneTheme("canister","контейнер"))
     dataTheme.add(DataOneTheme("stove","печь"))
     dataTheme.add(DataOneTheme("burner","конфорка"))
@@ -301,7 +377,7 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("toaster","тостер"))
     dataTheme.add(DataOneTheme("cookbook","книга с рецептами"))
     dataTheme.add(DataOneTheme("refrigerator","холодильник"))
-    dataTheme.add(DataOneTheme("freezer","морозильная камера"))
+    dataTheme.add(DataOneTheme("freezer","морозилка"))
     dataTheme.add(DataOneTheme("kitchenware","кухонная посуда"))
     dataTheme.add(DataOneTheme("housekeeping","уборка"))
     dataTheme.add(DataOneTheme("broom","веник"))
@@ -316,7 +392,6 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("bleach","отбеливатель"))
     dataTheme.add(DataOneTheme("cleanser","моющее средство"))
     dataTheme.add(DataOneTheme("laundry","стирка"))
-    dataTheme.add(DataOneTheme("laundry detergent","стиральный порошок"))
     dataTheme.add(DataOneTheme("dust","пыль"))
     dataTheme.add(DataOneTheme("air","проветривать"))
     dataTheme.add(DataOneTheme("trash can","мусорное ведро"))
@@ -324,7 +399,6 @@ private fun get4ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("garbage","мусор"))
     dataTheme.add(DataOneTheme("dirt","грязь"))
     dataTheme.add(DataOneTheme("shelving","стеллаж"))
-    dataTheme.add(DataOneTheme("desk","рабочий стол"))
     dataTheme.add(DataOneTheme("interior","интерьер"))
     return dataTheme
 
@@ -336,22 +410,16 @@ private fun get5ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("ambulance","скорая помощь"))
     dataTheme.add(DataOneTheme("bus","автобус"))
     dataTheme.add(DataOneTheme("car","автомобиль"))
-    dataTheme.add(DataOneTheme("truck","грузовой автомобиль"))
-    dataTheme.add(DataOneTheme("fire truck","пожарная машина"))
     dataTheme.add(DataOneTheme("helicopter","вертолёт"))
     dataTheme.add(DataOneTheme("motorcycle","мотоцикл"))
-    dataTheme.add(DataOneTheme("police car","полицейский автомобиль"))
     dataTheme.add(DataOneTheme("road","дорога"))
     dataTheme.add(DataOneTheme("boat","лодка"))
     dataTheme.add(DataOneTheme("sailboat","парусник"))
     dataTheme.add(DataOneTheme("ship","корабль"))
     dataTheme.add(DataOneTheme("street","улица"))
-    dataTheme.add(DataOneTheme("submarine","подводная лодка"))
     dataTheme.add(DataOneTheme("subway","тоннель"))
-    dataTheme.add(DataOneTheme("tractor","трактор"))
     dataTheme.add(DataOneTheme("traffic light","светофор"))
     dataTheme.add(DataOneTheme("train","поезд"))
-    dataTheme.add(DataOneTheme("train crossing","железнодорожный переезд"))
     dataTheme.add(DataOneTheme("van","фургон"))
     dataTheme.add(DataOneTheme("scooter","скутер"))
     dataTheme.add(DataOneTheme("bicycle","велосипед"))
@@ -376,7 +444,6 @@ private fun get5ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("flight","рейс"))
     dataTheme.add(DataOneTheme("takeoff","взлет"))
     dataTheme.add(DataOneTheme("landing","посадка"))
-    dataTheme.add(DataOneTheme("runway","взлетно-посадочная полоса"))
     dataTheme.add(DataOneTheme("gate","выход "))
     dataTheme.add(DataOneTheme("boarding","посадка "))
     dataTheme.add(DataOneTheme("passenger","пассажир"))
@@ -392,6 +459,30 @@ private fun get5ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("emergency","авария"))
     dataTheme.add(DataOneTheme("delay","задержка"))
     dataTheme.add(DataOneTheme("destination","место назначения"))
+    dataTheme.add(DataOneTheme("agency","агентство"))
+    dataTheme.add(DataOneTheme("gasoline","бензин"))
+    dataTheme.add(DataOneTheme("currency","валюта"))
+    dataTheme.add(DataOneTheme("train station","вокзал"))
+    dataTheme.add(DataOneTheme("city","город"))
+    dataTheme.add(DataOneTheme("guest house","гостевой дом"))
+    dataTheme.add(DataOneTheme("hotel","гостиница"))
+    dataTheme.add(DataOneTheme("vacation","отпуск"))
+    dataTheme.add(DataOneTheme("abroad","за границей"))
+    dataTheme.add(DataOneTheme("foreigner","иностранец"))
+    dataTheme.add(DataOneTheme("map","карта"))
+    dataTheme.add(DataOneTheme("resort","курорт"))
+    dataTheme.add(DataOneTheme("route","маршрут "))
+    dataTheme.add(DataOneTheme("room","номер"))
+    dataTheme.add(DataOneTheme("rest","отдых"))
+    dataTheme.add(DataOneTheme("postcard","открытка"))
+    dataTheme.add(DataOneTheme("beach","пляж"))
+    dataTheme.add(DataOneTheme("coast","побережье"))
+    dataTheme.add(DataOneTheme("journey","путешествие"))
+    dataTheme.add(DataOneTheme("recreation","развлечение"))
+    dataTheme.add(DataOneTheme("capital","столица"))
+    dataTheme.add(DataOneTheme("country","страна"))
+    dataTheme.add(DataOneTheme("taxi","такси"))
+    dataTheme.add(DataOneTheme("exotic","экзотический"))
     return dataTheme
 
 }
@@ -403,13 +494,11 @@ private fun get6ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("big","большой"))
     dataTheme.add(DataOneTheme("medium","средний"))
     dataTheme.add(DataOneTheme("little","маленький"))
-    dataTheme.add(DataOneTheme("large","большой"))
     dataTheme.add(DataOneTheme("huge","огромный"))
     dataTheme.add(DataOneTheme("long","длинный"))
     dataTheme.add(DataOneTheme("short","короткий"))
     dataTheme.add(DataOneTheme("wide","широкий"))
     dataTheme.add(DataOneTheme("narrow","узкий"))
-    dataTheme.add(DataOneTheme("high","высокий"))
     dataTheme.add(DataOneTheme("tall","высокий"))
     dataTheme.add(DataOneTheme("low","низкий"))
     dataTheme.add(DataOneTheme("deep","глубокий"))
@@ -465,7 +554,7 @@ private fun get7ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("candy","конфета"))
     dataTheme.add(DataOneTheme("cake"," торт"))
     dataTheme.add(DataOneTheme("cookie","печенье"))
-    dataTheme.add(DataOneTheme("croissant","французский рогалик"))
+    dataTheme.add(DataOneTheme("croissant","круассан"))
     dataTheme.add(DataOneTheme("jelly","желе"))
     dataTheme.add(DataOneTheme("ice cream","мороженое"))
     dataTheme.add(DataOneTheme("pancake","блин"))
@@ -475,7 +564,6 @@ private fun get7ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("salted","солёный"))
     dataTheme.add(DataOneTheme("sour","кислый "))
     dataTheme.add(DataOneTheme("drink","напиток"))
-    dataTheme.add(DataOneTheme("soft drink","безалкогольный напиток"))
     dataTheme.add(DataOneTheme("beverage","напиток"))
     dataTheme.add(DataOneTheme("water","вода"))
     dataTheme.add(DataOneTheme("lemonade","лимонад"))
@@ -576,7 +664,6 @@ private fun get8ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("storm","ураган"))
     dataTheme.add(DataOneTheme("nature","природа"))
     dataTheme.add(DataOneTheme("beach"," пляж"))
-    dataTheme.add(DataOneTheme("coast","морское побережье"))
     dataTheme.add(DataOneTheme("desert","пустыня"))
     dataTheme.add(DataOneTheme("glacier","ледник"))
     dataTheme.add(DataOneTheme("forest","лес"))
@@ -634,7 +721,7 @@ private fun get9ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("pearl","жемчужный"))
     dataTheme.add(DataOneTheme("green","зеленый"))
     dataTheme.add(DataOneTheme("goldenrod","золотистый"))
-    dataTheme.add(DataOneTheme("gold, golden","золотой"))
+    dataTheme.add(DataOneTheme(" golden","золотой"))
     dataTheme.add(DataOneTheme("emerald","изумрудный"))
     dataTheme.add(DataOneTheme("indigo","индиго"))
     dataTheme.add(DataOneTheme("firebrick","кирпичный"))
@@ -655,14 +742,14 @@ private fun get9ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("orange","оранжевый"))
     dataTheme.add(DataOneTheme("sienna","охра"))
     dataTheme.add(DataOneTheme("ash","пепельно-серый"))
-    dataTheme.add(DataOneTheme("peach, peachpuff","персиковый"))
+    dataTheme.add(DataOneTheme("peach","персиковый"))
     dataTheme.add(DataOneTheme("sand-coloured","песочный"))
     dataTheme.add(DataOneTheme("purple","пурпурный"))
     dataTheme.add(DataOneTheme("pink","розовый"))
     dataTheme.add(DataOneTheme("light-green","салатовый"))
     dataTheme.add(DataOneTheme("light","светлый"))
-    dataTheme.add(DataOneTheme("silver, silvery","серебряный"))
-    dataTheme.add(DataOneTheme("grey, gray","серый"))
+    dataTheme.add(DataOneTheme("silvery","серебряный"))
+    dataTheme.add(DataOneTheme("grey","серый"))
     dataTheme.add(DataOneTheme("blue","синий"))
     dataTheme.add(DataOneTheme("lilac","сиреневый"))
     dataTheme.add(DataOneTheme("plum","сливовый"))
@@ -670,7 +757,7 @@ private fun get9ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("steel gray","стальной серый"))
     dataTheme.add(DataOneTheme("maroon","темно-бордовый"))
     dataTheme.add(DataOneTheme("dark","темный"))
-    dataTheme.add(DataOneTheme("navy (blue)","тёмно-синий"))
+    dataTheme.add(DataOneTheme("navy-blue","тёмно-синий"))
     dataTheme.add(DataOneTheme("terracotta","терракотовый"))
     dataTheme.add(DataOneTheme("dull","тусклый"))
     dataTheme.add(DataOneTheme("purple","фиолетовый"))
@@ -678,8 +765,8 @@ private fun get9ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("pistachio","фисташковый"))
     dataTheme.add(DataOneTheme("magenta","фуксин"))
     dataTheme.add(DataOneTheme("fuchsia","фуксия"))
-    dataTheme.add(DataOneTheme("khaki, forest green","хаки"))
-    dataTheme.add(DataOneTheme("seagreen","цвет морской волны"))
+    dataTheme.add(DataOneTheme("khaki","хаки"))
+    dataTheme.add(DataOneTheme("seagreen","морская волна"))
     dataTheme.add(DataOneTheme("black","черный"))
     dataTheme.add(DataOneTheme("amber","янтарный"))
     return dataTheme
@@ -705,7 +792,7 @@ private fun get10ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("suit","костюм"))
     dataTheme.add(DataOneTheme("jeans","джинсы"))
     dataTheme.add(DataOneTheme("shorts","шорты"))
-    dataTheme.add(DataOneTheme("T-shirt","футболка"))
+    dataTheme.add(DataOneTheme("t-shirt","футболка"))
     dataTheme.add(DataOneTheme("cap","кепка"))
     dataTheme.add(DataOneTheme("hat","шляпа"))
     dataTheme.add(DataOneTheme("shoes","туфли"))
@@ -892,6 +979,39 @@ private fun get11ThemeData():ArrayList<DataOneTheme>{
     dataTheme.add(DataOneTheme("cricket","сверчок"))
     dataTheme.add(DataOneTheme("bug","жук"))
     dataTheme.add(DataOneTheme("worm","червяк"))
+    return dataTheme
+
+}
+
+private fun get12ThemeData():ArrayList<DataOneTheme>{
+    val dataTheme= arrayListOf<DataOneTheme>()
+    dataTheme.add(DataOneTheme("action","действие"))
+    dataTheme.add(DataOneTheme("walk","идти"))
+    dataTheme.add(DataOneTheme("run","бежать"))
+    dataTheme.add(DataOneTheme("march","маршировать"))
+    dataTheme.add(DataOneTheme("crawl","ползать"))
+    dataTheme.add(DataOneTheme("drag","тянуть"))
+    dataTheme.add(DataOneTheme("pull"," тащить"))
+    dataTheme.add(DataOneTheme("push","толкать"))
+    dataTheme.add(DataOneTheme("jump","прыгать"))
+    dataTheme.add(DataOneTheme("skip"," скакать"))
+    dataTheme.add(DataOneTheme("leap","прыжок"))
+    dataTheme.add(DataOneTheme("hop","подпрыгивать"))
+    dataTheme.add(DataOneTheme("hit","ударять "))
+    dataTheme.add(DataOneTheme("slap","шлепать"))
+    dataTheme.add(DataOneTheme("kick","удар ногой"))
+    dataTheme.add(DataOneTheme("stretch","тянуться"))
+    dataTheme.add(DataOneTheme("lift"," поднимать"))
+    dataTheme.add(DataOneTheme("put","ставить"))
+    dataTheme.add(DataOneTheme("lean"," опирать"))
+    dataTheme.add(DataOneTheme("dive","нырять"))
+    dataTheme.add(DataOneTheme("sit","сидеть"))
+    dataTheme.add(DataOneTheme("squat","приседание"))
+    dataTheme.add(DataOneTheme("bend","сгибаться"))
+    dataTheme.add(DataOneTheme("hold","держать"))
+    dataTheme.add(DataOneTheme("carry"," носить"))
+    dataTheme.add(DataOneTheme("catch","ловить"))
+    dataTheme.add(DataOneTheme("throw","бросать"))
     return dataTheme
 
 }

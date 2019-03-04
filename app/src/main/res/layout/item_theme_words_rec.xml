@@ -22,7 +22,8 @@
                     android:layout_height="wrap_content" android:id="@+id/textViewNumber"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
                     app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="24dp"
-                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp"/>
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/roboto"/>
             <TextView
                     android:text="Word"
                     style="@style/text16colorMain"
@@ -30,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewEnglish" app:layout_constraintStart_toEndOf="@+id/textViewNumber"
                     android:layout_marginStart="64dp" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/roboto_medium"/>
             <TextView
                     android:text="перевод"
                     style="@style/text14colorLight"
@@ -38,9 +39,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewRussn"
                     app:layout_constraintTop_toBottomOf="@+id/textViewEnglish"
-                    app:layout_constraintStart_toStartOf="@+id/textViewEnglish"/>
+                    app:layout_constraintStart_toStartOf="@+id/textViewEnglish" android:fontFamily="@font/roboto"/>
             <TextView
                     android:text="@string/theme7"
+                    android:visibility="gone"
                     style="@style/text10colorWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -48,8 +50,8 @@
                     app:layout_constraintStart_toStartOf="@+id/textViewEnglish"
                     app:layout_constraintTop_toBottomOf="@+id/textViewRussn"/>
             <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
                     android:id="@+id/imageView14" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="16dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"

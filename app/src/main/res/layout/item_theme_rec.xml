@@ -20,7 +20,8 @@
 
                 <ImageView
                         android:layout_width="275dp"
-                        android:layout_height="182dp" app:srcCompat="@drawable/health_aa"
+                        android:layout_height="182dp"
+                        app:srcCompat="@drawable/health_aa"
                         style="@style/text18colorWhite"
                         android:id="@+id/imageViewTheme"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +35,8 @@
                         android:layout_height="wrap_content" android:id="@+id/textViewThemeName"
                         android:layout_marginTop="28dp"
                         app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                />
+                        android:fontFamily="@font/roboto_medium" android:textSize="18sp"
+                        android:layout_marginStart="2dp"/>
                 <TextView
                         android:text="TextView"
                         style="@style/text18colorWhite"
@@ -44,18 +46,20 @@
                         android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginStart="8dp" android:layout_marginTop="8dp"
                         app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"/>
+                        app:layout_constraintBottom_toBottomOf="parent" android:fontFamily="@font/raleway_bold"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
         <TextView
                 tools:text="98"
                 android:elevation="14dp"
+                android:textSize="60sp"
                 style="@style/text48colorWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewThemeWords" app:layout_constraintStart_toStartOf="@+id/cardView"
                 android:layout_marginBottom="155dp"
-                app:layout_constraintBottom_toBottomOf="@+id/cardView" android:layout_marginStart="2dp"/>
+                app:layout_constraintBottom_toBottomOf="@+id/cardView" android:layout_marginStart="2dp"
+                android:fontFamily="@font/raleway_extrabold"/>
         <TextView
                 android:text="@string/theme2"
                 style="@style/text10colorWhite"
@@ -63,7 +67,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4"
                 app:layout_constraintBottom_toTopOf="@+id/cardView"
-                app:layout_constraintStart_toEndOf="@+id/textViewThemeWords" android:layout_marginBottom="8dp"
-                android:layout_marginStart="8dp"/>
+                app:layout_constraintStart_toEndOf="@+id/textViewThemeWords"
+                android:layout_marginStart="8dp" android:fontFamily="@font/raleway_semibold"
+                android:layout_marginBottom="8dp" android:textSize="12sp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
