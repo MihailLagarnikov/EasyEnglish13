@@ -16,11 +16,9 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import ru.lagarnikov.easyenglish13.View.*
+import ru.lagarnikov.easyenglish13.view.*
 import ru.lagarnikov.easyenglish13.databinding.ActivityMainBinding
 import java.util.*
-import android.view.ViewGroup
-
 
 
 class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
@@ -42,14 +40,14 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main)
         mAdView=binding.adView
-        MobileAds.initialize(this, "ca-app-pub-2421174998731562~1772735539");
+        MobileAds.initialize(this, "ca-app-pub-2421174998731562/3002767167");
 
         createInnerData()
         mModel =  ViewModelProviders.of(this).get(MyViewModel()::class.java)
         createVisibleTopFragmentObserver()
         startBannerAdver()
         createNextFragmentObserver()
-        createSplashScrin()
+        createStartFragmen()
         createVisibleAdvweObserver()
         mTextSpeech=TextToSpeech(this,this);
         createTextSpeachObserver()
@@ -60,10 +58,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
 
 
-    private fun  createSplashScrin(){
-        Thread.sleep(1500)
-        createStartFragmen()
-    }
+
     private fun createStartFragmen(){
         when(InnerData.loadInt(STATUS_PROGRAMM)){
             STATUS_1 -> {
