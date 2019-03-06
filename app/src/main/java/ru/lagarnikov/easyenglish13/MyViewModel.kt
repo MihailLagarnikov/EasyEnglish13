@@ -1,16 +1,18 @@
 package ru.lagarnikov.easyenglish13
 
 import android.app.Application
+import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.lagarnikov.easyenglish13.Room.AppDatabase
-import ru.lagarnikov.easyenglish13.Room.DataSql
-import ru.lagarnikov.easyenglish13.TestPresenter.MyLessonPresenter
-import ru.lagarnikov.easyenglish13.TestPresenter.MyTimer
+import ru.lagarnikov.easyenglish13.room.AppDatabase
+import ru.lagarnikov.easyenglish13.room.DataSql
+import ru.lagarnikov.easyenglish13.model.MyLessonPresenter
+import ru.lagarnikov.easyenglish13.model.MyTimer
 
 class MyViewModel():ViewModel() {
+
 
     private lateinit var db: AppDatabase
     val mPresenter=MyLessonPresenter(this)

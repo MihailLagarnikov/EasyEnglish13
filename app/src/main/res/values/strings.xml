@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">EasyEnglish1.3</string>
+    <string name="app_name">Be Brain</string>
 
-    <string name="admobId">ca-app-pub-2421174998731562~1772735539</string>
+    <string name="admobId">ca-app-pub-2421174998731562/3002767167</string>
 
     <string name="hintTestTop1">выберите правильный вариант</string>
     <string name="hintTestTop2">введите перевод</string>
@@ -63,6 +63,7 @@
     <string name="lessonEnd4">time/min</string>
     <string name="lessonEnd5">Установить напоминание</string>
     <string name="lessonEnd6">СЛЕДУЮЩИЙ УРОК</string>
+    <string name="lessonEnd61">НАЧАТЬ УРОК</string>
     <string name="lessonEnd7">minutes</string>
     <string name="lessonEnd8">ВЫБРАТЬ НОВУЮ ТЕМУ</string>
     <string name="lessonEnd9">ПРОДОЛЖИТЬ УРОК</string>

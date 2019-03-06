@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "56402920352",
+    "firebase_url": "https://easyenglish-f4d26.firebaseio.com",
+    "project_id": "easyenglish-f4d26",
+    "storage_bucket": "easyenglish-f4d26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56402920352:android:89c98a467b4a288d",
+        "android_client_info": {
+          "package_name": "ru.lagarnikov.easyenglish13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56402920352-ak8c83n4j1usbdf2ih0e04op6rkkhokb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeUgymNXsOXNb8s7NORUqjFONOoo5vepE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

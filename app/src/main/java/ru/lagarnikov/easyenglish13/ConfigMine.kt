@@ -1,10 +1,8 @@
 package ru.lagarnikov.easyenglish13
 
 import androidx.fragment.app.Fragment
-import ru.lagarnikov.easyenglish13.TestPresenter.MyLessonPresenter
-import ru.lagarnikov.easyenglish13.View.*
-import java.text.SimpleDateFormat
-import java.util.*
+import ru.lagarnikov.easyenglish13.model.MyLessonPresenter
+import ru.lagarnikov.easyenglish13.view.*
 
 val THEME_CURENT="theme_curent"
 val TRAVEL_RU="Путешествия"
@@ -21,6 +19,7 @@ val SPEED_SPEACH_LOW:Float=0.13F
 val CURENT_NUMBER_WARDS="curent_wards"
 val LESSON_CREATED="lesson created"
 val LESSON_REPIT_ALRM="lesson created repit"
+val LESSON_USALI_ALRM="lesson created repit"
 val LESSON_NUMBER="lesson number"
 
 //DB
@@ -67,6 +66,23 @@ val TIMER_INTERVAL:Long=1000
 enum class TypeTest{
     TestA,TestB,TestC,TestD, TestE
 }
+
+enum class StateLesson{
+    usaliStatus,
+    usaliLessonError,
+    firstLesson,
+    simpleLessonNeed,
+    simpleLessonStart,
+    simplLessonFinish,
+    repitLessonNeed,
+    repitLessonERROR,
+    repitLessonStart,
+    repitLessonFinish,
+    controlnaiNeed,
+    controlnaiNeedElse,
+    controlnaiStart,
+    controlnaiFinish
+}
 val NUMBER_TYPE_TEST_FULL=5 //сколько типов теста для слова в зависимости от типа курса, это первый курс
 val NUMBER_TYPE_TEST_2=3
 val NUMBER_TYPE_TEST_3=2
@@ -87,6 +103,7 @@ val CURENT_COURSE_2=2
 val CURENT_COURSE_3=3
 
 val STATUS_PROGRAMM="status_programm"
+val STATUS_PROGRAMM_SPESIAL="status_programm_speh"
 val STATUS_1=1 // урок пройден, новый не начат
 val STATUS_2=2 // мы начали новый урок, и пока еге не закончили
 val STATUS_3=3 // мы вышли из урока в уровни выше, либо еще дошли до этого
