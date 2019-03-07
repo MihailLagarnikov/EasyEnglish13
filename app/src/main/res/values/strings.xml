@@ -141,4 +141,9 @@
     <string name="themeMain12">Глаголы действия</string>
     <string name="themeNumber12">27</string>
 
+
+
+
+    <string name="crash_toast_text">Ошибка!Отправляем отчет!</string>
+
 </resources>

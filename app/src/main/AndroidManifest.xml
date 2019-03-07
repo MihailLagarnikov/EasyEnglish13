@@ -8,6 +8,7 @@
 
 
     <application
+            android:name=".MyApplication"
             android:allowBackup="true"
             android:icon="@mipmap/icon_start"
             android:label="@string/app_name"
@@ -27,7 +28,7 @@
         </activity>
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="ca-app-pub-2421174998731562/3002767167"/>
+                android:value="ca-app-pub-2421174998731562~1772735539"/>
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
 
 

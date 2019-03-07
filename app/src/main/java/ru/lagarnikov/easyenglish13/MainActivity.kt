@@ -38,9 +38,10 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
+        MobileAds.initialize(this, "ca-app-pub-2421174998731562~1772735539");
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main)
         mAdView=binding.adView
-        MobileAds.initialize(this, "ca-app-pub-2421174998731562/3002767167");
+
 
         createInnerData()
         mModel =  ViewModelProviders.of(this).get(MyViewModel()::class.java)
