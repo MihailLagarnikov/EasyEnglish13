@@ -121,9 +121,12 @@
             android:elevation="4dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/arrow_right"
-            android:id="@+id/imageViewF" app:layout_constraintEnd_toEndOf="@+id/buttonNextLesson2"
-            app:layout_constraintStart_toStartOf="@+id/buttonNextLesson2" android:layout_marginStart="9dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/arrow_right"
+            android:id="@+id/imageViewF"
+            app:layout_constraintEnd_toEndOf="@+id/buttonNextLesson2"
+            app:layout_constraintStart_toStartOf="@+id/buttonNextLesson2"
+            android:layout_marginStart="9dp"
             app:layout_constraintBottom_toBottomOf="@+id/buttonNextLesson2"
             app:layout_constraintTop_toTopOf="@+id/buttonNextLesson2"/>
     <Button

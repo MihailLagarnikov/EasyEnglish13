@@ -12,32 +12,36 @@
         <variable
                 name="mVisibile"
                 type="ru.lagarnikov.easyenglish13.DataVisibileView" />
+
+        <variable
+                name="mMinimizeSize"
+                type="Boolean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constrFragmentTop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="144dp">
 
         <ImageView
                 android:scaleType="fitXY"
                 android:layout_width="0dp"
-                android:layout_height="144dp" app:srcCompat="@drawable/ic_family_c"
+                android:layout_height="0dp" app:srcCompat="@drawable/ic_family_c"
                 android:id="@+id/imageCurentTheme" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-        />
+                app:layout_constraintBottom_toBottomOf="parent"/>
         <TextView
-                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+                android:visibility="@{mMinimizeSize ? View.GONE : (!mVisibile.answerNotDone ? View.VISIBLE : View.GONE) }"
                 tools:text="УРОК №1"
                 android:text="@{@string/numberTestTop + mData.numberLesson}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/text36colorMain"
-                android:id="@+id/textLessonNumber" android:layout_marginTop="16dp"
+                android:id="@+id/textLessonNumber" android:layout_marginTop="32dp"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp" android:fontFamily="@font/raleway_extrabold"/>
         <TextView
-                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+                android:visibility="@{mMinimizeSize ? View.GONE : (!mVisibile.answerNotDone ? View.VISIBLE : View.GONE) }"
                 tools:text="ПУТЕШЕСТВИЯ"
                 android:text="@{mData.theneName}"
                 android:layout_width="wrap_content"
@@ -53,12 +57,12 @@
                 android:layout_height="wrap_content"
                 style="@style/text14colorWhite"
                 android:id="@+id/textViewHint" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-                android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textViewTheme"
-                android:fontFamily="@font/roboto_medium"/>
+                android:fontFamily="@font/roboto_medium" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
 
         <ProgressBar
                 style="?android:attr/progressBarStyle"
-                android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+                android:visibility="@{mMinimizeSize ? View.GONE : (mVisibile.answerNotDone ? View.VISIBLE : View.GONE) }"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:indeterminateDrawable="@drawable/spiner_my"
@@ -66,8 +70,23 @@
                 android:id="@+id/progressBarCounting"
                 app:layout_constraintEnd_toEndOf="@+id/imageCurentTheme" android:layout_marginEnd="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageCurentTheme"/>
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewProgressLineBottom"/>
+
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:visibility="@{!mMinimizeSize ? View.GONE : (mVisibile.answerNotDone ? View.VISIBLE : View.GONE) }"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:indeterminateDrawable="@drawable/spiner_my_min"
+                android:indeterminateOnly="true"
+                android:id="@+id/progressBarCountingMin"
+                app:layout_constraintEnd_toEndOf="@+id/imageCurentTheme" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewProgressLineBottom"/>
 
         <ImageView
                 android:layout_width="44dp"
@@ -86,11 +105,11 @@
                 android:layout_height="wrap_content"
                 style="@style/text30colorWhithe"
                 android:id="@+id/textСounting" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageCurentTheme"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="5dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewProgressLineBottom"/>
 
 
         <ImageView
@@ -109,20 +128,20 @@
                 android:id="@+id/imageViewProgressLineTop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageViewProgressLineBottom"/>
-        <FrameLayout
-                android:layout_width="80dp"
-                android:layout_height="60dp" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="8dp" android:id="@+id/frameBack">
-
-            <ImageView
-                    android:layout_gravity="left"
-                    android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
-                    android:layout_width="48dp"
-                    android:layout_height="24dp" app:srcCompat="@drawable/arrow_long_new"
-                    android:id="@+id/imageView2"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"/>
-        </FrameLayout>
+        <ImageView
+                android:layout_gravity="left"
+                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE }"
+                android:layout_width="48dp"
+                android:layout_height="24dp" app:srcCompat="@drawable/arrow_long_new"
+                android:id="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+                android:rotation="180"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/chevron_down_white"
+                android:id="@+id/imageViewMinimaizer" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

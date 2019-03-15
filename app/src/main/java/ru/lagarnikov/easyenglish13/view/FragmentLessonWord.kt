@@ -23,7 +23,7 @@ class FragmentLessonWord : Fragment(),View.OnClickListener {
             inflater, R.layout.fragment_words_lesson,
             container, false
         )
-        mModel = ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel = ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(false)
 
         val myView = binding.root

@@ -18,7 +18,7 @@ class FragmentCreateCourseA:Fragment(),View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_create_course_start,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(false)
         val myView=binding.root
         binding.mCurentCourse=mValyeCoyrse
@@ -28,8 +28,21 @@ class FragmentCreateCourseA:Fragment(),View.OnClickListener {
         binding.card3Cours.setOnClickListener(this)
 
         mModel.setVisibleAdver(false)
+        setCOlorNumber()
 
         return myView
+    }
+
+    private fun setCOlorNumber(){
+        binding.imageView.setImageResource(R.drawable.ic_01)
+        binding.imageView27.setImageResource(R.drawable.ic_02)
+        binding.imageView28.setImageResource(R.drawable.ic_03)
+        when(mValyeCoyrse){
+            1 ->binding.imageView.setImageResource(R.drawable.ic_01_or)
+            2 ->binding.imageView27.setImageResource(R.drawable.ic_02_or)
+            3 ->binding.imageView28.setImageResource(R.drawable.ic_03_or)
+
+        }
     }
 
     override fun onClick(v: View?) {
@@ -39,6 +52,7 @@ class FragmentCreateCourseA:Fragment(),View.OnClickListener {
             binding.card3Cours -> mValyeCoyrse= CURENT_COURSE_3
         }
         InnerData.saveInt(CURENT_COURSE,mValyeCoyrse)
+        setCOlorNumber()
         mModel.setNextFragmentName(FragmentCreateCourseB())
     }
 }

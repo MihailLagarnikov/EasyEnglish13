@@ -31,7 +31,7 @@ class FragmentEndLesson:Fragment(),View.OnClickListener {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_lesson_finish, container, false)
 
         val myView = binding.root
-        mModel = ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel = ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mDetectStatusLesson=DetacterSpeshalLesson(mModel,resources)
         mModel.setVisibleTopFragment(false)
         binding.mStatusProg=InnerData.loadInt(STATUS_PROGRAMM)
@@ -120,7 +120,7 @@ class FragmentEndLesson:Fragment(),View.OnClickListener {
         InnerData.saveBoolean(START_CONTROLNAIA,false)
         binding.textView5.text=resources.getString(R.string.lessonEnd21)
         binding.textView7.text=resources.getString(R.string.lessonEnd22)
-        mModel.createDB(activity!!.application,mThemeName)
+        mModel.createDB(mThemeName)
         mStatusLesson=StateLesson.usaliStatus
     }
 
@@ -194,7 +194,7 @@ class FragmentEndLesson:Fragment(),View.OnClickListener {
                 mModel.setNextFragmentName(mModel.mPresenter.getFragmentTestType())
             }
             StateLesson.controlnaiNeed,StateLesson.controlnaiNeedElse ->{
-                mModel.createDB(activity!!.application,mDetectStatusLesson.mControlnaiaTheme)
+                mModel.createDB(mDetectStatusLesson.mControlnaiaTheme)
                 mModel.mPresenter.createOrReadLesson(mDetectStatusLesson.mControlnaiaTheme,true)
                 mModel.setNextFragmentName(mModel.mPresenter.getFragmentTestType())
             }

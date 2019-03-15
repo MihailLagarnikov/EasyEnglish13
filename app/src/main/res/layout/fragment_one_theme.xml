@@ -34,7 +34,7 @@
                     <ImageView
                             android:scaleType="centerCrop"
                             android:layout_width="0dp"
-                            android:layout_height="80dp" app:srcCompat="@drawable/ic_health_b_a"
+                            android:layout_height="0dp" app:srcCompat="@drawable/ic_health_b_a"
                             android:id="@+id/imageView16" app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -76,12 +76,11 @@
                     android:layout_height="80dp"
                     android:id="@+id/cardOneTheme"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+                    app:layout_constraintEnd_toEndOf="parent">
                 <androidx.constraintlayout.widget.ConstraintLayout
                         android:background="@color/colorBacgroundTest"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="80dp">
 
                     <Button
                             android:background="@color/colorTextMain"
@@ -105,6 +104,7 @@
                     <ImageView
                             android:layout_width="0dp"
                             android:layout_height="80dp" app:srcCompat="@drawable/ic_health_b_b"
+                            android:scaleType="centerCrop"
                             android:id="@+id/imageView10"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"

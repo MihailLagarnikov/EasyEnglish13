@@ -16,6 +16,8 @@ val FACE_EN="face"
 
 val SPEED_SPEACH_FAST:Float=0.7F
 val SPEED_SPEACH_LOW:Float=0.13F
+val SPEED_SPEACH_FAST_LOW_24:Float=1.2F
+val SPEED_SPEACH_LOW_LOW_24:Float=0.8F
 val CURENT_NUMBER_WARDS="curent_wards"
 val LESSON_CREATED="lesson created"
 val LESSON_REPIT_ALRM="lesson created repit"
@@ -61,6 +63,10 @@ val REPIT_LESSON_CREATED = "repitLessonCreated"
 val TIMER_MAX:Long=3000
 val TIMER_MAX_TEXT:String="3"
 val TIMER_INTERVAL:Long=1000
+
+
+val MAX_SIZE_FRAGMENT_TOP="maxSizeFragmentTop"
+val MIN_SIZE_PRESS="maxSizePress"
 
 
 enum class TypeTest{
@@ -181,15 +187,15 @@ fun getBoleanWithIntDb(i:Int):Boolean{
     return true
 }
 
-fun getTypTest(i:Int, presenter: MyLessonPresenter):Fragment{
+fun getTypTest(i:Int):Fragment{
     when(i){
-        1 ->return TestA(presenter)
-        2 ->return TestB(presenter)
-        3 ->return TestC(presenter)
-        4 ->return TestD(presenter)
-        5 ->return TestE(presenter)
+        1 ->return TestA()
+        2 ->return TestB()
+        3 ->return TestC()
+        4 ->return TestD()
+        5 ->return TestE()
     }
-    return TestA(presenter)
+    return TestA()
 }
 
 /*

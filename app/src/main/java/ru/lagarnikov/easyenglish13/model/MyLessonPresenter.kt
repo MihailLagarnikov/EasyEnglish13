@@ -42,8 +42,10 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
         mNumberLesson=InnerData.loadInt(LESSON_NUMBER + mThemeName)
 
         if (InnerData.loadBoolean(LESSON_CREATED + mThemeName) && mTypeCourse==InnerData.loadInt(CURENT_COURSE)) {
+            mTypeCourse=InnerData.loadInt(CURENT_COURSE)
             readLesson()
         } else {
+            mTypeCourse=InnerData.loadInt(CURENT_COURSE)
             createLesson()
 
         }
@@ -248,7 +250,7 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
                 mRuWards=dataItem.ru
                 /*mIdInDb=dataItem.id*/
                 mCurentDataItem=dataItem
-                return getTypTest(randomInt,this)
+                return getTypTest(randomInt)
             }
             return getRandomTestType(dataItem)
         }else{
@@ -337,7 +339,13 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
 
     //Рандомно выбирает из спска слов урока три слова, которые будут неправильными вариантами ответа
     private fun getRandomAnswerWords(trueWords:String, langEn:Boolean, secondWards:String ="", thredWords:String=""):DataAnswerAB{
-        val randomInt=Random().nextInt(mListItem.size)
+        var randomInt: Int
+        try {
+            randomInt = Random().nextInt(mListItem.size)
+        } catch (e: UninitializedPropertyAccessException) {
+            mListItem=mModel.getListDataSqlTest()
+            randomInt = Random().nextInt(mListItem.size)
+        }
         if (langEn) {
             if (mListItem.get(randomInt).en.equals(trueWords) || mListItem.get(randomInt).en.equals(secondWards)
                 || mListItem.get(randomInt).en.equals(thredWords)){
@@ -424,7 +432,7 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
     }
 
     //После того как урок пройден изменяем статус слов с STATE__STUDIED_JUST на STATE__STUDIED_LONG
-    private fun changeItemStateAfterLesson(){
+    private fun changeItemStateAfterLesson(exitInLesson:Boolean=false){
         for (i in 0 until mListItem.size){
 
             if (mListItem.get(i).state== STATE__STUDIED_JUST){
@@ -434,7 +442,11 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
                     mListItem.get(i).state= STATE__STUDIED_LONG
                 }
                 mModel.replaseDataSql(mListItem.get(i))
-
+            }else  if (exitInLesson){
+                if (mListItem.get(i).state== STATE__STUD_NOW) {
+                    mListItem.get(i).state = STATE_NOT_STUDIED
+                }
+                mModel.replaseDataSql(mListItem.get(i))
             }
         }
     }
@@ -504,11 +516,6 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
 
     }
 
-    private fun round(number: Float, scale: Int): Float {
-        val pow = Math.pow(10.0, scale.toDouble()).toInt()
-        val tmp = number * pow
-        return (if (tmp - tmp.toInt() >= 0.5f) tmp + 1 else tmp).toInt().toFloat() / pow
-    }
 
 
     //Прогресс изучения по теме целиком в словах
@@ -607,6 +614,10 @@ class MyLessonPresenter(val mModel: MyViewModel): ContractMVP.LessonPresenter {
         mRepitLesson=true
         InnerData.saveBoolean(REPIT_LESSON_CREATED,true)
         getDataNow()
+    }
+
+    fun exitInLesson(){
+        changeItemStateAfterLesson(exitInLesson = true)
     }
 
 

@@ -1,14 +1,10 @@
 package ru.lagarnikov.easyenglish13.view
 
-import android.annotation.SuppressLint
 import android.view.View
 import ru.lagarnikov.easyenglish13.DataVisibileView
-import ru.lagarnikov.easyenglish13.model.MyLessonPresenter
 import ru.lagarnikov.easyenglish13.TypeTest
 
-@SuppressLint("ValidFragment")
-class TestB @SuppressLint("ValidFragment") constructor
-    (val mPresenter2: MyLessonPresenter):TestA(mPresenter2) {
+class TestB():TestA() {
 
     override fun getTypeTest(): TypeTest {
         return TypeTest.TestB

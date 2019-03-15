@@ -1,6 +1,5 @@
 package ru.lagarnikov.easyenglish13.view
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater
@@ -15,14 +14,13 @@ import android.app.Activity
 import android.view.inputmethod.InputMethodManager
 
 
-@SuppressLint("ValidFragment")
-open class TestA @SuppressLint("ValidFragment") constructor
-    (open val mPresenter:MyLessonPresenter):Fragment(),View.OnClickListener {
+open class TestA():Fragment(),View.OnClickListener {
+    private lateinit var  mPresenter:MyLessonPresenter
     protected val mTypeTest=getTypeTest()
     protected var mAnswerNotDone:Boolean=false
     private var mAnswerTrue:Boolean=false
     private var mDataVisibile=getDataVisibileVIew()
-    protected val mCurentDataTest=mPresenter.getTestDate(mTypeTest)
+    protected lateinit var mCurentDataTest:DataMidleFragment
     lateinit var binding: FragmentMidleTestABBinding
     lateinit var mModel: MyViewModel
 
@@ -36,13 +34,13 @@ open class TestA @SuppressLint("ValidFragment") constructor
 
 
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_midle_test_a_b,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
 
         val myView=binding.root
+        initModelAndPresenter()
         binding.mData=mCurentDataTest
         binding.mVisibile= mDataVisibile
         mModel.setVisibleElements(mDataVisibile)
@@ -71,6 +69,13 @@ open class TestA @SuppressLint("ValidFragment") constructor
 
 
         return myView
+    }
+
+
+    private fun initModelAndPresenter(){
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
+        mPresenter=mModel.mPresenter
+        mCurentDataTest =mPresenter.getTestDate(mTypeTest)
     }
 
     private fun chitTest(){

@@ -26,7 +26,7 @@ class FragmentCreateCourseB:Fragment(),SeekBar.OnSeekBarChangeListener,View.OnCl
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_create_course,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(false)
         val myView=binding.root
         mSeekBar=binding.seekBar

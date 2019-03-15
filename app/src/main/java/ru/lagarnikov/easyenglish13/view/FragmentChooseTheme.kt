@@ -26,7 +26,7 @@ class FragmentChooseTheme:Fragment() {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_choose_theme,
             container, false)
         val myView=binding.root
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(false)
         binding.recyclerView.setLayoutManager(GridLayoutManager(context, 1))
         binding.recyclerView.adapter=AdapterRecTheme(getAllThemeDataFull(),mModel,resources)

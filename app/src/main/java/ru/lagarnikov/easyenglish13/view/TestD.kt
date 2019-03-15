@@ -1,6 +1,5 @@
 package ru.lagarnikov.easyenglish13.view
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -18,22 +17,22 @@ import android.view.inputmethod.InputMethodManager
 import ru.lagarnikov.easyenglish13.*
 
 
-@SuppressLint("ValidFragment")
-open class TestD @SuppressLint("ValidFragment") constructor
-    (open val mPresenter: MyLessonPresenter):Fragment(),View.OnClickListener {
+open class TestD ():Fragment(),View.OnClickListener {
+    private lateinit var  mPresenter:MyLessonPresenter
     protected val mTypeTest=getTypeTest()
     private var mAnswerNotDone:Boolean=false
     private var mAnswerTrue:Boolean=false
     protected var mDataVisibile=getDataVisibileVIew()
     lateinit var binding: FragmentMidleTestCDBinding
     lateinit var mModel: MyViewModel
-    protected val mCurentDataTest=mPresenter.getTestDate(mTypeTest)
+    protected lateinit var mCurentDataTest:DataMidleFragment
     var mError=0;
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_midle_test_c_d,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        initModelAndPresenter()
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(true)
 
         val myView=binding.root
@@ -52,6 +51,11 @@ open class TestD @SuppressLint("ValidFragment") constructor
         return myView
     }
 
+    private fun initModelAndPresenter(){
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
+        mPresenter=mModel.mPresenter
+        mCurentDataTest =mPresenter.getTestDate(mTypeTest)
+    }
     private fun chitTest(){
         mDataVisibile.answerTrue=true
         answerDone(true)

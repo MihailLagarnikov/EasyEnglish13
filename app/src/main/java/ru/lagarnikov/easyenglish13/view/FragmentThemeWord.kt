@@ -21,7 +21,7 @@ class FragmentThemeWord:Fragment(),View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_one_theme,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(false)
 
         val myView=binding.root
@@ -71,7 +71,7 @@ class FragmentThemeWord:Fragment(),View.OnClickListener {
     }
 
     private fun getDb(){
-        mModel.createDB(activity!!.application,mThemeName)
+        mModel.createDB(mThemeName)
         val cc=mModel.getListDataSqlTest()
         if (cc.size<2) {
             val newListDataSql=arrayListOf<DataSql>()

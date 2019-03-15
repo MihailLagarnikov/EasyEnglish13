@@ -84,8 +84,9 @@
             android:id="@+id/textViewNextTectE"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonMicrofone"
-            android:fontFamily="@font/roboto" android:textColor="@color/colorTextMain"/>
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonMicrofone"
+            android:fontFamily="@font/roboto" android:textColor="@color/colorTextMain" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp" app:srcCompat="@drawable/microphone"
@@ -131,7 +132,8 @@
             app:backgroundTint="@color/colorMicrofonFon"
             android:id="@+id/floatingActionButtonMicrofone" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/cardView5"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/cardView5"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

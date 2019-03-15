@@ -37,14 +37,15 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
-        super.onCreate(savedInstanceState)
+        createInnerData()
+        super.onCreate(null)
         MobileAds.initialize(this, "ca-app-pub-2421174998731562~1772735539");
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main)
         mAdView=binding.adView
 
 
-        createInnerData()
-        mModel =  ViewModelProviders.of(this).get(MyViewModel()::class.java)
+
+        mModel =  ViewModelProviders.of(this).get(MyViewModel::class.java)
         createVisibleTopFragmentObserver()
         startBannerAdver()
         createNextFragmentObserver()
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         createVisibleAdvweObserver()
         mTextSpeech=TextToSpeech(this,this);
         createTextSpeachObserver()
+        createMinimizerFragmentTopObserver()
 
 
     }
@@ -64,12 +66,12 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         when(InnerData.loadInt(STATUS_PROGRAMM)){
             STATUS_1 -> {
                 mModel.setNextFragmentName(FragmentEndLesson())
-                mModel.createDB(application,InnerData.loadText(THEME_CURENT))
+                mModel.createDB(InnerData.loadText(THEME_CURENT))
             }
             STATUS_2 ->{
                 mModel.setNextFragmentName(FragmentEndLesson())
                 InnerData.saveBoolean(CONTIN_LESSON, true)
-                mModel.createDB(application, InnerData.loadText(THEME_CURENT))
+                mModel.createDB(InnerData.loadText(THEME_CURENT))
             }
             STATUS_3 -> mModel.setNextFragmentName(FragmentChooseTheme())
             0 -> {
@@ -88,7 +90,7 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     private fun createTopFragmen(){
         if (!mTopFragmentExist) {
-            mFragmentTop=FragmentTop(mModel.mPresenter)
+            mFragmentTop=FragmentTop()
             val fragmentTransaction = supportFragmentManager.beginTransaction()
             fragmentTransaction.add(R.id.frameTop, mFragmentTop)
             fragmentTransaction.commit()
@@ -145,6 +147,15 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         mModel.getVisibleTopFragment().observe(this,visADv)
     }
 
+    private fun createMinimizerFragmentTopObserver(){
+        val minimm= Observer<Boolean> { newBool ->  changeSizeFragmentTop(newBool)}
+        mModel.getMinimizerFargmentTop().observe(this,minimm)
+    }
+
+    private fun changeSizeFragmentTop(min:Boolean){
+
+    }
+
     private fun startBannerAdver(){
         if (!mStatusAdver) {
             mAdView.visibility=View.VISIBLE
@@ -185,16 +196,25 @@ class MainActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
 
     fun speechGo(text: String) {
-        if (text.equals(mLastSpeachWords)) {
-            if (fastSpeedSpeech){
-                mTextSpeech.setSpeechRate(SPEED_SPEACH_FAST)
-            }else{
-                mTextSpeech.setSpeechRate(SPEED_SPEACH_LOW)
-            }
-            fastSpeedSpeech=fastSpeedSpeech.not()
-        } else {
-            mTextSpeech.setSpeechRate(SPEED_SPEACH_FAST)
+        var fastSpeed:Float
+        var lowSpeed:Float
+        if (Build.VERSION.SDK_INT<24){
+            fastSpeed= SPEED_SPEACH_FAST_LOW_24
+            lowSpeed= SPEED_SPEACH_LOW_LOW_24
+        }else{
+            fastSpeed= SPEED_SPEACH_FAST
+            lowSpeed= SPEED_SPEACH_LOW
         }
+            if (text.equals(mLastSpeachWords)) {
+                if (fastSpeedSpeech){
+                    mTextSpeech.setSpeechRate(fastSpeed)
+                }else{
+                    mTextSpeech.setSpeechRate(lowSpeed)
+                }
+                fastSpeedSpeech=fastSpeedSpeech.not()
+            } else {
+                mTextSpeech.setSpeechRate(fastSpeed)
+            }
 
         if (mIsInitSpeech && Build.VERSION.SDK_INT>21){
             mTextSpeech.speak(text, TextToSpeech.QUEUE_ADD,null,"goo")

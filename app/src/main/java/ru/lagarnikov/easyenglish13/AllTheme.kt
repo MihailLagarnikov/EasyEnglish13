@@ -50,14 +50,31 @@ fun getOrangeFotoTopFragment():ArrayList<Int>{
     dataOrangeFoto.add(R.drawable.health_c)
     dataOrangeFoto.add(R.drawable.ic_family_c)
     dataOrangeFoto.add(R.drawable.ic_house_c)
-    dataOrangeFoto.add(R.drawable.ic_travel_c)
-    dataOrangeFoto.add(R.drawable.ic_size_c)
-    dataOrangeFoto.add(R.drawable.ic_food_c)
-    dataOrangeFoto.add(R.drawable.ic_natura_c)
-    dataOrangeFoto.add(R.drawable.ic_colore_c)
-    dataOrangeFoto.add(R.drawable.ic_clothes_c)
-    dataOrangeFoto.add(R.drawable.ic_animal_c)
-    dataOrangeFoto.add(R.drawable.ic_act_c)
+dataOrangeFoto.add(R.drawable.ic_travel_c)
+dataOrangeFoto.add(R.drawable.ic_size_c)
+dataOrangeFoto.add(R.drawable.ic_food_c)
+dataOrangeFoto.add(R.drawable.ic_natura_c)
+dataOrangeFoto.add(R.drawable.ic_colore_c)
+dataOrangeFoto.add(R.drawable.ic_clothes_c)
+dataOrangeFoto.add(R.drawable.ic_animal_c)
+dataOrangeFoto.add(R.drawable.ic_act_c)
+
+return dataOrangeFoto
+}
+
+fun getOrangeFotoTopFragmentMInimum():ArrayList<Int>{
+    val dataOrangeFoto= arrayListOf<Int>()
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
+    dataOrangeFoto.add(R.drawable.need_delete)
 
     return dataOrangeFoto
 }

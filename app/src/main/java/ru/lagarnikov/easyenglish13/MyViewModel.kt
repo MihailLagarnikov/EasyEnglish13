@@ -3,15 +3,15 @@ package ru.lagarnikov.easyenglish13
 import android.app.Application
 import android.content.Context
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import ru.lagarnikov.easyenglish13.room.AppDatabase
 import ru.lagarnikov.easyenglish13.room.DataSql
 import ru.lagarnikov.easyenglish13.model.MyLessonPresenter
 import ru.lagarnikov.easyenglish13.model.MyTimer
 
-class MyViewModel():ViewModel() {
+class MyViewModel(application: Application):AndroidViewModel(application) {
 
 
     private lateinit var db: AppDatabase
@@ -25,6 +25,7 @@ class MyViewModel():ViewModel() {
     private val dataTopFragment=MutableLiveData<DataTopFragment>()
     private val visibliTopFragment=MutableLiveData<Boolean>()
     private val visibliAdver=MutableLiveData<Boolean>()
+    private val minimizerFragmentTop=MutableLiveData<Boolean>()
 
     fun setNextFragmentName(newFragment: Fragment){
         nextFragmentName.value=newFragment
@@ -83,10 +84,19 @@ class MyViewModel():ViewModel() {
         visibliAdver.value=vis
     }
 
+    fun getMinimizerFargmentTop():LiveData<Boolean>{
+        return minimizerFragmentTop
+    }
+
+    fun setMinimazerFragmentTop( min:Boolean){
+        minimizerFragmentTop.value=min
+    }
 
 
-    fun createDB(application:Application, tableName:String){
-        db= AppDatabase.getInstance(application,tableName)!!
+
+    fun createDB(tableName:String){
+
+        db= AppDatabase.getInstance(getApplication(),tableName)!!
     }
 
     fun getListDataSqlTest():ArrayList<DataSql>{

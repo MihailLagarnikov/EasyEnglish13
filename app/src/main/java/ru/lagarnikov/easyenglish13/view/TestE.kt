@@ -1,6 +1,5 @@
 package ru.lagarnikov.easyenglish13.view
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,23 +14,21 @@ import ru.lagarnikov.easyenglish13.*
 import ru.lagarnikov.easyenglish13.model.MyLessonPresenter
 import ru.lagarnikov.easyenglish13.databinding.FragmentMidleTestEBinding
 
-@SuppressLint("ValidFragment")
-open class TestE @SuppressLint("ValidFragment") constructor
-    (open val mPresenter: MyLessonPresenter): Fragment(), View.OnClickListener {
+open class TestE(): Fragment(), View.OnClickListener {
+    private lateinit var  mPresenter:MyLessonPresenter
     protected val mTypeTest=getTypeTest()
     private var mAnswerNotDone:Boolean=false
     private var mAnswerTrue:Boolean=false
     protected var mDataVisibile=getDataVisibileVIew()
     lateinit var binding: FragmentMidleTestEBinding
     lateinit var mModel: MyViewModel
-    protected val mCurentDataTest=mPresenter.getTestDate(mTypeTest)
-    var mError=0;
-    private var mReqestStop=false
+    protected lateinit var mCurentDataTest:DataMidleFragment
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_midle_test_e,
             container, false)
-        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel()::class.java)
+        initModelAndPresenter()
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
         mModel.setVisibleTopFragment(true)
 
         val myView=binding.root
@@ -56,6 +53,12 @@ open class TestE @SuppressLint("ValidFragment") constructor
 
 
         return myView
+    }
+
+    private fun initModelAndPresenter(){
+        mModel =  ViewModelProviders.of(this!!.activity!!).get(MyViewModel::class.java)
+        mPresenter=mModel.mPresenter
+        mCurentDataTest =mPresenter.getTestDate(mTypeTest)
     }
 
     protected open fun getTypeTest(): TypeTest {
