@@ -141,7 +141,7 @@
         <style name="text14colorLight">
             <item name="android:textSize">14sp</item>
             <item name="android:gravity">center</item>
-            <item name="android:textColor">@color/colorTextLight2</item>
+            <item name="android:textColor">@color/colorTextMain</item>
         </style>
 
     <style name="text14colorMain">

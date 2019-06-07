@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="engHuman2" translatable="false">man</string>
+    <string name="engHuman3" translatable="false">woman</string>
+    <string name="engHuman4" translatable="false">body</string>
+    <string name="engHuman5" translatable="false">head</string>
+    <string name="engHuman6" translatable="false">shoulder</string>
+    <string name="engHuman7" translatable="false">hand</string>
+    <string name="engHuman8" translatable="false">elbow</string>
+    <string name="engHuman9" translatable="false">chest</string>
+    <string name="engHuman10" translatable="false">stomach</string>
+    <string name="engHuman11" translatable="false">back</string>
+    <string name="engHuman12" translatable="false">bottom</string>
+    <string name="engHuman13" translatable="false">thigh</string>
+    <string name="engHuman14" translatable="false">waist</string>
+    <string name="engHuman15" translatable="false">leg</string>
+    <string name="engHuman16" translatable="false">knee</string>
+    <string name="engHuman17" translatable="false">foot </string>
+    <string name="engHuman18" translatable="false">heel</string>
+    <string name="engHuman19" translatable="false">finger</string>
+    <string name="engHuman20" translatable="false">fingernail</string>
+    <string name="engHuman21" translatable="false">toe</string>
+    <string name="engHuman22" translatable="false">neck</string>
+    <string name="engHuman23" translatable="false">face</string>
+    <string name="engHuman24" translatable="false">nose</string>
+    <string name="engHuman25" translatable="false">mouth</string>
+    <string name="engHuman26" translatable="false">lip</string>
+    <string name="engHuman27" translatable="false">tooth </string>
+    <string name="engHuman28" translatable="false">tongue</string>
+    <string name="engHuman29" translatable="false">eye</string>
+    <string name="engHuman30" translatable="false">eyebrow</string>
+    <string name="engHuman31" translatable="false">eyelash</string>
+    <string name="engHuman32" translatable="false">pupil</string>
+    <string name="engHuman33" translatable="false">eyelid</string>
+    <string name="engHuman34" translatable="false">chin</string>
+    <string name="engHuman35" translatable="false">cheek</string>
+    <string name="engHuman36" translatable="false">forehead</string>
+    <string name="engHuman37" translatable="false">hair</string>
+    <string name="engHuman38" translatable="false">moustache</string>
+    <string name="engHuman39" translatable="false">beard</string>
+    <string name="engHuman40" translatable="false">appearance</string>
+    <string name="engHuman41" translatable="false">thin</string>
+    <string name="engHuman42" translatable="false">fat</string>
+    <string name="engHuman43" translatable="false">tall</string>
+    <string name="engHuman44" translatable="false">short</string>
+    <string name="engHuman45" translatable="false">weak</string>
+    <string name="engHuman46" translatable="false">strong</string>
+    <string name="engHuman47" translatable="false">slim</string>
+    <string name="engHuman48" translatable="false">plump</string>
+    <string name="engHuman49" translatable="false">old</string>
+    <string name="engHuman50" translatable="false">young</string>
+    <string name="engHuman51" translatable="false">hairy</string>
+    <string name="engHuman52" translatable="false">bald</string>
+    <string name="engHuman53" translatable="false">curly</string>
+    <string name="engHuman54" translatable="false">pretty</string>
+    <string name="engHuman55" translatable="false">handsome</string>
+    <string name="engHuman56" translatable="false">ugly</string>
+    <string name="engHuman57" translatable="false">character</string>
+    <string name="engHuman58" translatable="false">clever</string>
+    <string name="engHuman59" translatable="false">talented</string>
+    <string name="engHuman60" translatable="false">active</string>
+    <string name="engHuman61" translatable="false">creative</string>
+    <string name="engHuman62" translatable="false">energetic</string>
+    <string name="engHuman63" translatable="false">stupid</string>
+    <string name="engHuman64" translatable="false">considerate</string>
+    <string name="engHuman65" translatable="false">cruel</string>
+    <string name="engHuman66" translatable="false">unkind</string>
+    <string name="engHuman67" translatable="false">polite</string>
+    <string name="engHuman68" translatable="false">rude</string>
+    <string name="engHuman69" translatable="false">kind</string>
+    <string name="engHuman70" translatable="false">tactful</string>
+    <string name="engHuman71" translatable="false">married</string>
+    <string name="engHuman72" translatable="false">single</string>
+    <string name="engHuman73" translatable="false">generous</string>
+    <string name="engHuman74" translatable="false">greedy</string>
+    <string name="engHuman75" translatable="false">rich</string>
+    <string name="engHuman76" translatable="false">poor</string>
+    <string name="engHuman77" translatable="false">emotion</string>
+    <string name="engHuman78" translatable="false">mischievous</string>
+    <string name="engHuman79" translatable="false">ecstatic</string>
+    <string name="engHuman80" translatable="false">content</string>
+    <string name="engHuman81" translatable="false">bored</string>
+    <string name="engHuman82" translatable="false">shocked</string>
+    <string name="engHuman83" translatable="false">offended</string>
+    <string name="engHuman84" translatable="false">confident</string>
+    <string name="engHuman85" translatable="false">happy</string>
+    <string name="engHuman86" translatable="false">hopeful</string>
+    <string name="engHuman87" translatable="false">curious</string>
+    <string name="engHuman88" translatable="false">excited</string>
+    <string name="engHuman89" translatable="false">lonely</string>
+    <string name="engHuman90" translatable="false">nervous</string>
+    <string name="engHuman91" translatable="false">goofy</string>
+    <string name="engHuman92" translatable="false">scared</string>
+    <string name="engHuman93" translatable="false">sad</string>
+    <string name="engHuman94" translatable="false">hungry</string>
+    <string name="engHuman95" translatable="false">thirsty</string>
+    <string name="engHuman96" translatable="false">tired</string>
+    <string name="engHuman97" translatable="false">sleepy</string>
+    <string name="engHuman98" translatable="false">surprised</string>
+
+
+
+    <string name="engHealth2" translatable="false">health</string>
+    <string name="engHealth3" translatable="false">allergy</string>
+    <string name="engHealth4" translatable="false">plaster</string>
+    <string name="engHealth5" translatable="false">bloody nose</string>
+    <string name="engHealth6" translatable="false">broken arm</string>
+    <string name="engHealth7" translatable="false">bruise</string>
+    <string name="engHealth8" translatable="false">bump</string>
+    <string name="engHealth9" translatable="false">cough</string>
+    <string name="engHealth10" translatable="false">cut</string>
+    <string name="engHealth11" translatable="false">diarrhea</string>
+    <string name="engHealth12" translatable="false">fever</string>
+    <string name="engHealth13" translatable="false">headache</string>
+    <string name="engHealth14" translatable="false">loose tooth</string>
+    <string name="engHealth15" translatable="false">medicine</string>
+    <string name="engHealth16" translatable="false">runny nose</string>
+    <string name="engHealth17" translatable="false">scratch</string>
+    <string name="engHealth18" translatable="false">shot</string>
+    <string name="engHealth19" translatable="false">sick</string>
+    <string name="engHealth20" translatable="false">sneeze</string>
+    <string name="engHealth21" translatable="false">stomachache</string>
+    <string name="engHealth22" translatable="false">sunburn</string>
+    <string name="engHealth23" translatable="false">thermometer</string>
+    <string name="engHealth24" translatable="false">throw up</string>
+    <string name="engHealth25" translatable="false">toothache</string>
+    <string name="engHealth26" translatable="false">hygiene</string>
+    <string name="engHealth27" translatable="false">care</string>
+    <string name="engHealth28" translatable="false">abscess</string>
+    <string name="engHealth29" translatable="false">ambulance</string>
+    <string name="engHealth30" translatable="false">asthma</string>
+    <string name="engHealth31" translatable="false">bandage</string>
+    <string name="engHealth32" translatable="false">brain</string>
+    <string name="engHealth33" translatable="false">break</string>
+    <string name="engHealth34" translatable="false">bronchitis</string>
+    <string name="engHealth35" translatable="false">cancer </string>
+    <string name="engHealth36" translatable="false">cold</string>
+    <string name="engHealth37" translatable="false">diagnosis</string>
+    <string name="engHealth38" translatable="false">dose</string>
+    <string name="engHealth39" translatable="false">deaf </string>
+    <string name="engHealth40" translatable="false">epidemic</string>
+    <string name="engHealth41" translatable="false">influenza</string>
+    <string name="engHealth42" translatable="false">heart attack </string>
+    <string name="engHealth43" translatable="false">infectious</string>
+    <string name="engHealth44" translatable="false">patient</string>
+    <string name="engHealth45" translatable="false">operation</string>
+    <string name="engHealth46" translatable="false">prescription</string>
+    <string name="engHealth47" translatable="false">pregnant</string>
+    <string name="engHealth48" translatable="false">pale</string>
+    <string name="engHealth49" translatable="false">pain</string>
+    <string name="engHealth50" translatable="false">poison </string>
+    <string name="engHealth51" translatable="false">pulse </string>
+    <string name="engHealth52" translatable="false">rash</string>
+    <string name="engHealth53" translatable="false">cure</string>
+    <string name="engHealth54" translatable="false">spine</string>
+    <string name="engHealth55" translatable="false">skeleton </string>
+    <string name="engHealth56" translatable="false">skull </string>
+    <string name="engHealth57" translatable="false">syringe</string>
+    <string name="engHealth58" translatable="false">tablet</string>
+    <string name="engHealth59" translatable="false">x-ray</string>
+    <string name="engHealth60" translatable="false">ulcer</string>
+    <string name="engHealth61" translatable="false">weak</string>
+
+
+    <string name="engFamily2" translatable="false">family</string>
+    <string name="engFamily3" translatable="false">mother</string>
+    <string name="engFamily4" translatable="false">father</string>
+    <string name="engFamily5" translatable="false">parents</string>
+    <string name="engFamily6" translatable="false">son</string>
+    <string name="engFamily7" translatable="false">daughter</string>
+    <string name="engFamily8" translatable="false">children</string>
+    <string name="engFamily9" translatable="false">sister</string>
+    <string name="engFamily10" translatable="false">brother</string>
+    <string name="engFamily11" translatable="false">grandmother</string>
+    <string name="engFamily12" translatable="false">grandfather</string>
+    <string name="engFamily13" translatable="false">grandson</string>
+    <string name="engFamily14" translatable="false">granddaughter</string>
+    <string name="engFamily15" translatable="false">aunt</string>
+    <string name="engFamily16" translatable="false">uncle</string>
+    <string name="engFamily17" translatable="false">niece</string>
+    <string name="engFamily18" translatable="false">nephew</string>
+    <string name="engFamily19" translatable="false">baby</string>
+    <string name="engFamily20" translatable="false">boyfriend</string>
+    <string name="engFamily21" translatable="false">groom</string>
+    <string name="engFamily22" translatable="false">bride </string>
+    <string name="engFamily23" translatable="false">foster child </string>
+    <string name="engFamily24" translatable="false">godchild </string>
+    <string name="engFamily25" translatable="false">husband</string>
+    <string name="engFamily26" translatable="false">relatives</string>
+    <string name="engFamily27" translatable="false">wife </string>
+    <string name="engFamily28" translatable="false">adop </string>
+    <string name="engFamily29" translatable="false">adult</string>
+    <string name="engFamily30" translatable="false">ancestor </string>
+    <string name="engFamily31" translatable="false">bachelor </string>
+    <string name="engFamily32" translatable="false">baptize </string>
+    <string name="engFamily33" translatable="false">born </string>
+    <string name="engFamily34" translatable="false">raise </string>
+    <string name="engFamily35" translatable="false">couple </string>
+    <string name="engFamily36" translatable="false">descendant </string>
+    <string name="engFamily37" translatable="false">divorced </string>
+    <string name="engFamily38" translatable="false">fall in love</string>
+    <string name="engFamily39" translatable="false">orphan </string>
+    <string name="engFamily40" translatable="false">teenager</string>
+    <string name="engFamily41" translatable="false">wedding</string>
+    <string name="engFamily42" translatable="false">widow </string>
+    <string name="engFamily43" translatable="false">widower </string>
+    <string name="engFamily44" translatable="false">youth </string>
+    <string name="engFamily45" translatable="false">twins</string>
+    <string name="engFamily46" translatable="false">inherit</string>
+
+
+
+    <string name="engHouse2" translatable="false">house</string>
+    <string name="engHouse3" translatable="false">apartment</string>
+    <string name="engHouse4" translatable="false">room</string>
+    <string name="engHouse5" translatable="false">bathroom</string>
+    <string name="engHouse6" translatable="false">balcony</string>
+    <string name="engHouse7" translatable="false">bedroom</string>
+    <string name="engHouse8" translatable="false">closet</string>
+    <string name="engHouse9" translatable="false">dining room</string>
+    <string name="engHouse10" translatable="false">doorbell</string>
+    <string name="engHouse11" translatable="false">door</string>
+    <string name="engHouse12" translatable="false">upstairs</string>
+    <string name="engHouse13" translatable="false">downstairs</string>
+    <string name="engHouse14" translatable="false">roof</string>
+    <string name="engHouse15" translatable="false">window</string>
+    <string name="engHouse16" translatable="false">garage</string>
+    <string name="engHouse17" translatable="false">hall</string>
+    <string name="engHouse18" translatable="false">kitchen</string>
+    <string name="engHouse19" translatable="false">hallway</string>
+    <string name="engHouse20" translatable="false">living room</string>
+    <string name="engHouse21" translatable="false">mailbox</string>
+    <string name="engHouse22" translatable="false">shower</string>
+    <string name="engHouse23" translatable="false">stairs</string>
+    <string name="engHouse24" translatable="false">toilet</string>
+    <string name="engHouse25" translatable="false">sofa</string>
+    <string name="engHouse26" translatable="false">armchair</string>
+    <string name="engHouse27" translatable="false">chair</string>
+    <string name="engHouse28" translatable="false">floor</string>
+    <string name="engHouse29" translatable="false">rug</string>
+    <string name="engHouse30" translatable="false">table</string>
+    <string name="engHouse31" translatable="false">lamp</string>
+    <string name="engHouse32" translatable="false">wall</string>
+    <string name="engHouse33" translatable="false">curtain</string>
+    <string name="engHouse34" translatable="false">pillow</string>
+    <string name="engHouse35" translatable="false">ceiling</string>
+    <string name="engHouse36" translatable="false">painting</string>
+    <string name="engHouse37" translatable="false">picture</string>
+    <string name="engHouse38" translatable="false">frame</string>
+    <string name="engHouse39" translatable="false">fireplace</string>
+    <string name="engHouse40" translatable="false">bookcase</string>
+    <string name="engHouse41" translatable="false">book</string>
+    <string name="engHouse42" translatable="false">towel</string>
+    <string name="engHouse43" translatable="false">scale</string>
+    <string name="engHouse44" translatable="false">shelf</string>
+    <string name="engHouse45" translatable="false">fan</string>
+    <string name="engHouse46" translatable="false">mirror</string>
+    <string name="engHouse47" translatable="false">sink</string>
+    <string name="engHouse48" translatable="false">bath</string>
+    <string name="engHouse49" translatable="false">toothbrush</string>
+    <string name="engHouse50" translatable="false">toothpaste</string>
+    <string name="engHouse51" translatable="false">soap</string>
+    <string name="engHouse52" translatable="false">sponge</string>
+    <string name="engHouse53" translatable="false">comb</string>
+    <string name="engHouse54" translatable="false">razor</string>
+    <string name="engHouse55" translatable="false">bowl</string>
+    <string name="engHouse56" translatable="false">salad bowl</string>
+    <string name="engHouse57" translatable="false">tablecloth</string>
+    <string name="engHouse58" translatable="false">saltshaker</string>
+    <string name="engHouse59" translatable="false">peppershaker</string>
+    <string name="engHouse60" translatable="false">teapot</string>
+    <string name="engHouse61" translatable="false">coffeepot</string>
+    <string name="engHouse62" translatable="false">sugar bowl</string>
+    <string name="engHouse63" translatable="false">plate</string>
+    <string name="engHouse64" translatable="false">cup</string>
+    <string name="engHouse65" translatable="false">glass</string>
+    <string name="engHouse66" translatable="false">fork</string>
+    <string name="engHouse67" translatable="false">spoon</string>
+    <string name="engHouse68" translatable="false">teaspoon</string>
+    <string name="engHouse69" translatable="false">knife</string>
+    <string name="engHouse70" translatable="false">candlestick</string>
+    <string name="engHouse71" translatable="false">candle</string>
+    <string name="engHouse72" translatable="false">napkin</string>
+    <string name="engHouse73" translatable="false">bed</string>
+    <string name="engHouse74" translatable="false">mattress</string>
+    <string name="engHouse75" translatable="false">pillowcase</string>
+    <string name="engHouse76" translatable="false">sheet</string>
+    <string name="engHouse77" translatable="false">blanket</string>
+    <string name="engHouse78" translatable="false">alarm clock</string>
+    <string name="engHouse79" translatable="false">sink</string>
+    <string name="engHouse80" translatable="false">sponge</string>
+    <string name="engHouse81" translatable="false">cabinet</string>
+    <string name="engHouse82" translatable="false">microwave</string>
+    <string name="engHouse83" translatable="false">canister</string>
+    <string name="engHouse84" translatable="false">stove</string>
+    <string name="engHouse85" translatable="false">burner</string>
+    <string name="engHouse86" translatable="false">oven</string>
+    <string name="engHouse87" translatable="false">potholder</string>
+    <string name="engHouse88" translatable="false">toaster</string>
+    <string name="engHouse89" translatable="false">cookbook</string>
+    <string name="engHouse90" translatable="false">refrigerator</string>
+    <string name="engHouse91" translatable="false">freezer</string>
+    <string name="engHouse92" translatable="false">kitchenware</string>
+    <string name="engHouse93" translatable="false">housekeeping</string>
+    <string name="engHouse94" translatable="false">broom</string>
+    <string name="engHouse95" translatable="false">sweep</string>
+    <string name="engHouse96" translatable="false">dustpan</string>
+    <string name="engHouse97" translatable="false">vacuum cleaner</string>
+    <string name="engHouse98" translatable="false">iron</string>
+    <string name="engHouse99" translatable="false">ironing board</string>
+    <string name="engHouse100" translatable="false">mop</string>
+    <string name="engHouse101" translatable="false">rag</string>
+    <string name="engHouse102" translatable="false">wipe</string>
+    <string name="engHouse103" translatable="false">bleach</string>
+    <string name="engHouse104" translatable="false">cleanser</string>
+    <string name="engHouse105" translatable="false">laundry</string>
+    <string name="engHouse106" translatable="false">dust</string>
+    <string name="engHouse107" translatable="false">air</string>
+    <string name="engHouse108" translatable="false">trash can</string>
+    <string name="engHouse109" translatable="false">empty</string>
+    <string name="engHouse110" translatable="false">garbage</string>
+    <string name="engHouse111" translatable="false">dirt</string>
+    <string name="engHouse112" translatable="false">shelving</string>
+    <string name="engHouse113" translatable="false">interior</string>
+
+
+
+
+
+    <string name="engTravel2" translatable="false">transport</string>
+    <string name="engTravel3" translatable="false">ambulance</string>
+    <string name="engTravel4" translatable="false">bus</string>
+    <string name="engTravel5" translatable="false">car</string>
+    <string name="engTravel6" translatable="false">helicopter</string>
+    <string name="engTravel7" translatable="false">motorcycle</string>
+    <string name="engTravel8" translatable="false">road</string>
+    <string name="engTravel9" translatable="false">boat</string>
+    <string name="engTravel10" translatable="false">sailboat</string>
+    <string name="engTravel11" translatable="false">ship</string>
+    <string name="engTravel12" translatable="false">street</string>
+    <string name="engTravel13" translatable="false">subway</string>
+    <string name="engTravel14" translatable="false">traffic light</string>
+    <string name="engTravel15" translatable="false">train</string>
+    <string name="engTravel16" translatable="false">van</string>
+    <string name="engTravel17" translatable="false">scooter</string>
+    <string name="engTravel18" translatable="false">bicycle</string>
+    <string name="engTravel19" translatable="false">airport</string>
+    <string name="engTravel20" translatable="false">airplane</string>
+    <string name="engTravel21" translatable="false">wing</string>
+    <string name="engTravel22" translatable="false">tail</string>
+    <string name="engTravel23" translatable="false">cabin</string>
+    <string name="engTravel24" translatable="false">fuselage</string>
+    <string name="engTravel25" translatable="false">undercarriage</string>
+    <string name="engTravel26" translatable="false">lavatory</string>
+    <string name="engTravel27" translatable="false">window</string>
+    <string name="engTravel28" translatable="false">aisle</string>
+    <string name="engTravel29" translatable="false">seat</string>
+    <string name="engTravel30" translatable="false">armrest</string>
+    <string name="engTravel31" translatable="false">ticket</string>
+    <string name="engTravel32" translatable="false">suitcase</string>
+    <string name="engTravel33" translatable="false">backpack</string>
+    <string name="engTravel34" translatable="false">baggage</string>
+    <string name="engTravel35" translatable="false">life vest</string>
+    <string name="engTravel36" translatable="false">carry-on</string>
+    <string name="engTravel37" translatable="false">flight</string>
+    <string name="engTravel38" translatable="false">takeoff</string>
+    <string name="engTravel39" translatable="false">landing</string>
+    <string name="engTravel40" translatable="false">gate</string>
+    <string name="engTravel41" translatable="false">boarding</string>
+    <string name="engTravel42" translatable="false">passenger</string>
+    <string name="engTravel43" translatable="false">passport</string>
+    <string name="engTravel44" translatable="false">visa</string>
+    <string name="engTravel45" translatable="false">customs</string>
+    <string name="engTravel46" translatable="false">terminal</string>
+    <string name="engTravel47" translatable="false">schedule</string>
+    <string name="engTravel48" translatable="false">security guard</string>
+    <string name="engTravel49" translatable="false">trolley</string>
+    <string name="engTravel50" translatable="false">liquid</string>
+    <string name="engTravel51" translatable="false">hijack</string>
+    <string name="engTravel52" translatable="false">emergency</string>
+    <string name="engTravel53" translatable="false">delay</string>
+    <string name="engTravel54" translatable="false">destination</string>
+    <string name="engTravel55" translatable="false">agency</string>
+    <string name="engTravel56" translatable="false">gasoline</string>
+    <string name="engTravel57" translatable="false">currency</string>
+    <string name="engTravel58" translatable="false">train station</string>
+    <string name="engTravel59" translatable="false">city</string>
+    <string name="engTravel60" translatable="false">guest house</string>
+    <string name="engTravel61" translatable="false">hotel</string>
+    <string name="engTravel62" translatable="false">vacation</string>
+    <string name="engTravel63" translatable="false">abroad</string>
+    <string name="engTravel64" translatable="false">foreigner</string>
+    <string name="engTravel65" translatable="false">map</string>
+    <string name="engTravel66" translatable="false">resort</string>
+    <string name="engTravel67" translatable="false">route</string>
+    <string name="engTravel68" translatable="false">room</string>
+    <string name="engTravel69" translatable="false">rest</string>
+    <string name="engTravel70" translatable="false">postcard</string>
+    <string name="engTravel71" translatable="false">beach</string>
+    <string name="engTravel72" translatable="false">coast</string>
+    <string name="engTravel73" translatable="false">journey</string>
+    <string name="engTravel74" translatable="false">recreation</string>
+    <string name="engTravel75" translatable="false">capital</string>
+    <string name="engTravel76" translatable="false">country</string>
+    <string name="engTravel77" translatable="false">taxi</string>
+    <string name="engTravel78" translatable="false">exotic</string>
+
+
+    <string name="engAction2" translatable="false">action</string>
+    <string name="engAction3" translatable="false">walk</string>
+    <string name="engAction4" translatable="false">run</string>
+    <string name="engAction5" translatable="false">march</string>
+    <string name="engAction6" translatable="false">crawl</string>
+    <string name="engAction7" translatable="false">drag</string>
+    <string name="engAction8" translatable="false">push</string>
+    <string name="engAction9" translatable="false">jump</string>
+    <string name="engAction10" translatable="false">skip</string>
+    <string name="engAction11" translatable="false">leap</string>
+    <string name="engAction12" translatable="false">hop</string>
+    <string name="engAction13" translatable="false">hit</string>
+    <string name="engAction14" translatable="false">slap</string>
+    <string name="engAction15" translatable="false">kick</string>
+    <string name="engAction16" translatable="false">stretch</string>
+    <string name="engAction17" translatable="false">lift</string>
+    <string name="engAction18" translatable="false">put</string>
+    <string name="engAction19" translatable="false">lean</string>
+    <string name="engAction20" translatable="false">dive</string>
+    <string name="engAction21" translatable="false">sit</string>
+    <string name="engAction22" translatable="false">squat</string>
+    <string name="engAction23" translatable="false">bend</string>
+    <string name="engAction24" translatable="false">hold</string>
+    <string name="engAction25" translatable="false">carry</string>
+    <string name="engAction26" translatable="false">catch</string>
+    <string name="engAction27" translatable="false">throw</string>
+
+
+
+
+    <string name="engFood2" translatable="false">food</string>
+    <string name="engFood3" translatable="false">ham</string>
+    <string name="engFood4" translatable="false">sausage</string>
+    <string name="engFood5" translatable="false">meat</string>
+    <string name="engFood6" translatable="false">egg</string>
+    <string name="engFood7" translatable="false">pizza</string>
+    <string name="engFood8" translatable="false">soup</string>
+    <string name="engFood9" translatable="false">bread</string>
+    <string name="engFood10" translatable="false">porridge</string>
+    <string name="engFood11" translatable="false">flour</string>
+    <string name="engFood12" translatable="false">garlic</string>
+    <string name="engFood13" translatable="false">salad</string>
+    <string name="engFood14" translatable="false">fish</string>
+    <string name="engFood15" translatable="false">chicken</string>
+    <string name="engFood16" translatable="false">pork</string>
+    <string name="engFood17" translatable="false">beef</string>
+    <string name="engFood18" translatable="false">steak</string>
+    <string name="engFood19" translatable="false">spice</string>
+    <string name="engFood20" translatable="false">butter</string>
+    <string name="engFood21" translatable="false">macaroni</string>
+    <string name="engFood22" translatable="false">cheese</string>
+    <string name="engFood23" translatable="false">rice</string>
+    <string name="engFood24" translatable="false">pasta</string>
+    <string name="engFood25" translatable="false">ketchup</string>
+    <string name="engFood26" translatable="false">sauce</string>
+    <string name="engFood27" translatable="false">mayonnaise</string>
+    <string name="engFood28" translatable="false">bean</string>
+    <string name="engFood29" translatable="false">pepper</string>
+    <string name="engFood30" translatable="false">salt</string>
+    <string name="engFood31" translatable="false">sandwich</string>
+    <string name="engFood32" translatable="false">cutlet</string>
+    <string name="engFood33" translatable="false">caviar</string>
+    <string name="engFood34" translatable="false">vegetables</string>
+    <string name="engFood35" translatable="false">fruit</string>
+    <string name="engFood36" translatable="false">baked</string>
+    <string name="engFood37" translatable="false">fried</string>
+    <string name="engFood38" translatable="false">jam</string>
+    <string name="engFood39" translatable="false">sugar</string>
+    <string name="engFood40" translatable="false">candy</string>
+    <string name="engFood41" translatable="false">cake</string>
+    <string name="engFood42" translatable="false">cookie</string>
+    <string name="engFood43" translatable="false">croissant</string>
+    <string name="engFood44" translatable="false">jelly</string>
+    <string name="engFood45" translatable="false">ice cream</string>
+    <string name="engFood46" translatable="false">pancake</string>
+    <string name="engFood47" translatable="false">pie</string>
+    <string name="engFood48" translatable="false">sweet</string>
+    <string name="engFood49" translatable="false">bitter</string>
+    <string name="engFood50" translatable="false">salted</string>
+    <string name="engFood51" translatable="false">sour</string>
+    <string name="engFood52" translatable="false">drink</string>
+    <string name="engFood53" translatable="false">water</string>
+    <string name="engFood54" translatable="false">lemonade</string>
+    <string name="engFood55" translatable="false">tea</string>
+    <string name="engFood56" translatable="false">coffee</string>
+    <string name="engFood57" translatable="false">juice</string>
+    <string name="engFood58" translatable="false">milk</string>
+    <string name="engFood59" translatable="false">cocoa</string>
+    <string name="engFood60" translatable="false">chocolate</string>
+    <string name="engFood61" translatable="false">cocktail</string>
+    <string name="engFood62" translatable="false">milkshake</string>
+    <string name="engFood63" translatable="false">iced tea</string>
+    <string name="engFood64" translatable="false">orange juice</string>
+    <string name="engFood65" translatable="false">tomato juice</string>
+    <string name="engFood66" translatable="false">fruit juice</string>
+    <string name="engFood67" translatable="false">vegetable juice</string>
+    <string name="engFood68" translatable="false">alcohol</string>
+    <string name="engFood69" translatable="false">alcoholic beverage</string>
+    <string name="engFood70" translatable="false">beer</string>
+    <string name="engFood71" translatable="false">wine</string>
+    <string name="engFood72" translatable="false">apricot</string>
+    <string name="engFood73" translatable="false">pineapple</string>
+    <string name="engFood74" translatable="false">banana</string>
+    <string name="engFood75" translatable="false">bergamot</string>
+    <string name="engFood76" translatable="false">grape</string>
+    <string name="engFood77" translatable="false">grapefruit</string>
+    <string name="engFood78" translatable="false">pear</string>
+    <string name="engFood79" translatable="false">melon</string>
+    <string name="engFood80" translatable="false">lemon</string>
+    <string name="engFood81" translatable="false">mandarin</string>
+    <string name="engFood82" translatable="false">peach</string>
+    <string name="engFood83" translatable="false">plum</string>
+    <string name="engFood84" translatable="false">apple</string>
+    <string name="engFood85" translatable="false">lime</string>
+    <string name="engFood86" translatable="false">kiwi</string>
+    <string name="engFood87" translatable="false">fig</string>
+    <string name="engFood88" translatable="false">mango</string>
+    <string name="engFood89" translatable="false">persimmon</string>
+    <string name="engFood90" translatable="false">pomelo</string>
+    <string name="engFood91" translatable="false">berry</string>
+    <string name="engFood92" translatable="false">watermelon</string>
+    <string name="engFood93" translatable="false">barberry</string>
+    <string name="engFood94" translatable="false">cowberry</string>
+    <string name="engFood95" translatable="false">cherry</string>
+    <string name="engFood96" translatable="false">blackberry</string>
+    <string name="engFood97" translatable="false">strawberry</string>
+    <string name="engFood98" translatable="false">cranberry</string>
+    <string name="engFood99" translatable="false">raspberry</string>
+    <string name="engFood100" translatable="false">blueberry</string>
+    <string name="engFood101" translatable="false">sea-buckthorn</string>
+    <string name="engFood102" translatable="false">currant</string>
+    <string name="engFood103" translatable="false">vegetable</string>
+    <string name="engFood104" translatable="false">basil</string>
+    <string name="engFood105" translatable="false">eggplant</string>
+    <string name="engFood106" translatable="false">bean</string>
+    <string name="engFood107" translatable="false">pea</string>
+    <string name="engFood108" translatable="false">cabbage</string>
+    <string name="engFood109" translatable="false">potato</string>
+    <string name="engFood110" translatable="false">onion</string>
+    <string name="engFood111" translatable="false">carrot</string>
+    <string name="engFood112" translatable="false">cucumber</string>
+    <string name="engFood113" translatable="false">pepper</string>
+    <string name="engFood114" translatable="false">parsley</string>
+    <string name="engFood115" translatable="false">tomato</string>
+    <string name="engFood116" translatable="false">radish</string>
+    <string name="engFood117" translatable="false">beet</string>
+    <string name="engFood118" translatable="false">celery</string>
+    <string name="engFood119" translatable="false">pumpkin</string>
+    <string name="engFood120" translatable="false">dill</string>
+    <string name="engFood121" translatable="false">haricot</string>
+    <string name="engFood122" translatable="false">garlic</string>
+    <string name="engFood123" translatable="false">sorrel</string>
+
+
+
+    <string name="engNature2" translatable="false">sun</string>
+    <string name="engNature3" translatable="false">sunset</string>
+    <string name="engNature4" translatable="false">sunrise</string>
+    <string name="engNature5" translatable="false">dew</string>
+    <string name="engNature6" translatable="false">waterfall</string>
+    <string name="engNature7" translatable="false">rain</string>
+    <string name="engNature8" translatable="false">lightning</string>
+    <string name="engNature9" translatable="false">thunder</string>
+    <string name="engNature10" translatable="false">rainbow</string>
+    <string name="engNature11" translatable="false">sky</string>
+    <string name="engNature12" translatable="false">cloud</string>
+    <string name="engNature13" translatable="false">snow</string>
+    <string name="engNature14" translatable="false">ice</string>
+    <string name="engNature15" translatable="false">icicle</string>
+    <string name="engNature16" translatable="false">hoarfrost</string>
+    <string name="engNature17" translatable="false">eclipse</string>
+    <string name="engNature18" translatable="false">flood</string>
+    <string name="engNature19" translatable="false">earthquake</string>
+    <string name="engNature20" translatable="false">wind</string>
+    <string name="engNature21" translatable="false">storm</string>
+    <string name="engNature22" translatable="false">nature</string>
+    <string name="engNature23" translatable="false">beach</string>
+    <string name="engNature24" translatable="false">desert</string>
+    <string name="engNature25" translatable="false">glacier</string>
+    <string name="engNature26" translatable="false">forest</string>
+    <string name="engNature27" translatable="false">field</string>
+    <string name="engNature28" translatable="false">canyon</string>
+    <string name="engNature29" translatable="false">island</string>
+    <string name="engNature30" translatable="false">jungle</string>
+    <string name="engNature31" translatable="false">lake</string>
+    <string name="engNature32" translatable="false">mountain</string>
+    <string name="engNature33" translatable="false">hill</string>
+    <string name="engNature34" translatable="false">plain</string>
+    <string name="engNature35" translatable="false">hollow</string>
+    <string name="engNature36" translatable="false">pond</string>
+    <string name="engNature37" translatable="false">rock</string>
+    <string name="engNature38" translatable="false">ocean</string>
+    <string name="engNature39" translatable="false">sea</string>
+    <string name="engNature40" translatable="false">river</string>
+    <string name="engNature41" translatable="false">weather</string>
+    <string name="engNature42" translatable="false">sunny</string>
+    <string name="engNature43" translatable="false">cold</string>
+    <string name="engNature44" translatable="false">heat</string>
+    <string name="engNature45" translatable="false">mist</string>
+    <string name="engNature46" translatable="false">fog</string>
+    <string name="engNature47" translatable="false">cool</string>
+    <string name="engNature48" translatable="false">shower</string>
+    <string name="engNature49" translatable="false">lightning</string>
+    <string name="engNature50" translatable="false">breeze</string>
+    <string name="engNature51" translatable="false">rainfall</string>
+    <string name="engNature52" translatable="false">snowfall</string>
+    <string name="engNature53" translatable="false">hail</string>
+    <string name="engNature54" translatable="false">bright</string>
+    <string name="engNature55" translatable="false">hot</string>
+    <string name="engNature56" translatable="false">windy</string>
+    <string name="engNature57" translatable="false">cloudy</string>
+    <string name="engNature58" translatable="false">rainy</string>
+    <string name="engNature59" translatable="false">chilly</string>
+    <string name="engNature60" translatable="false">frosty</string>
+    <string name="engNature61" translatable="false">temperature</string>
+
+
+
+    <string name="engCoolor2" translatable="false">aquamarine</string>
+    <string name="engCoolor3" translatable="false">beige</string>
+    <string name="engCoolor4" translatable="false">snowy</string>
+    <string name="engCoolor5" translatable="false">white</string>
+    <string name="engCoolor6" translatable="false">turquoise</string>
+    <string name="engCoolor7" translatable="false">pale</string>
+    <string name="engCoolor8" translatable="false">bordeaux</string>
+    <string name="engCoolor9" translatable="false">bronze</string>
+    <string name="engCoolor10" translatable="false">yellow green</string>
+    <string name="engCoolor11" translatable="false">yellow</string>
+    <string name="engCoolor12" translatable="false">pearl</string>
+    <string name="engCoolor13" translatable="false">green</string>
+    <string name="engCoolor14" translatable="false">golden</string>
+    <string name="engCoolor15" translatable="false">emerald</string>
+    <string name="engCoolor16" translatable="false">indigo</string>
+    <string name="engCoolor17" translatable="false">firebrick</string>
+    <string name="engCoolor18" translatable="false">coral</string>
+    <string name="engCoolor19" translatable="false">brown</string>
+    <string name="engCoolor20" translatable="false">red</string>
+    <string name="engCoolor21" translatable="false">cream</string>
+    <string name="engCoolor22" translatable="false">azure</string>
+    <string name="engCoolor23" translatable="false">lime green</string>
+    <string name="engCoolor24" translatable="false">lemon</string>
+    <string name="engCoolor25" translatable="false">salmon</string>
+    <string name="engCoolor26" translatable="false">raspberry</string>
+    <string name="engCoolor27" translatable="false">copper</string>
+    <string name="engCoolor28" translatable="false">honeydew</string>
+    <string name="engCoolor29" translatable="false">aqua</string>
+    <string name="engCoolor30" translatable="false">sky blue</string>
+    <string name="engCoolor31" translatable="false">olive</string>
+    <string name="engCoolor32" translatable="false">orange</string>
+    <string name="engCoolor33" translatable="false">sienna</string>
+    <string name="engCoolor34" translatable="false">ash</string>
+    <string name="engCoolor35" translatable="false">peach</string>
+    <string name="engCoolor36" translatable="false">sand-coloured</string>
+    <string name="engCoolor37" translatable="false">purple</string>
+    <string name="engCoolor38" translatable="false">pink</string>
+    <string name="engCoolor39" translatable="false">light-green</string>
+    <string name="engCoolor40" translatable="false">light</string>
+    <string name="engCoolor41" translatable="false">silvery</string>
+    <string name="engCoolor42" translatable="false">grey</string>
+    <string name="engCoolor43" translatable="false">blue</string>
+    <string name="engCoolor44" translatable="false">lilac</string>
+    <string name="engCoolor45" translatable="false">plum</string>
+    <string name="engCoolor46" translatable="false">ivory</string>
+    <string name="engCoolor47" translatable="false">steel gray</string>
+    <string name="engCoolor48" translatable="false">maroon</string>
+    <string name="engCoolor49" translatable="false">dark</string>
+    <string name="engCoolor50" translatable="false">navy-blue</string>
+    <string name="engCoolor51" translatable="false">terracotta</string>
+    <string name="engCoolor52" translatable="false">dull</string>
+    <string name="engCoolor53" translatable="false">purple</string>
+    <string name="engCoolor54" translatable="false">pistachio</string>
+    <string name="engCoolor55" translatable="false">magenta</string>
+    <string name="engCoolor56" translatable="false">fuchsia</string>
+    <string name="engCoolor57" translatable="false">khaki</string>
+    <string name="engCoolor58" translatable="false">seagreen</string>
+    <string name="engCoolor59" translatable="false">black</string>
+    <string name="engCoolor60" translatable="false">amber</string>
+
+
+    <string name="engClothes2" translatable="false">clothes</string>
+    <string name="engClothes3" translatable="false">blouse</string>
+    <string name="engClothes4" translatable="false">skirt</string>
+    <string name="engClothes5" translatable="false">dress</string>
+    <string name="engClothes6" translatable="false">shirt</string>
+    <string name="engClothes7" translatable="false">trousers</string>
+    <string name="engClothes8" translatable="false">socks</string>
+    <string name="engClothes9" translatable="false">stockings</string>
+    <string name="engClothes10" translatable="false">tights</string>
+    <string name="engClothes11" translatable="false">swimsuit</string>
+    <string name="engClothes12" translatable="false">underpants</string>
+    <string name="engClothes13" translatable="false">sweater</string>
+    <string name="engClothes14" translatable="false">cardigan</string>
+    <string name="engClothes15" translatable="false">jersey</string>
+    <string name="engClothes16" translatable="false">suit</string>
+    <string name="engClothes17" translatable="false">jeans</string>
+    <string name="engClothes18" translatable="false">shorts</string>
+    <string name="engClothes19" translatable="false">t-shirt</string>
+    <string name="engClothes20" translatable="false">cap</string>
+    <string name="engClothes21" translatable="false">hat</string>
+    <string name="engClothes22" translatable="false">shoes</string>
+    <string name="engClothes23" translatable="false">boots</string>
+    <string name="engClothes24" translatable="false">sneakers</string>
+    <string name="engClothes25" translatable="false">slippers</string>
+    <string name="engClothes26" translatable="false">sandals</string>
+    <string name="engClothes27" translatable="false">jacket</string>
+    <string name="engClothes28" translatable="false">coat</string>
+    <string name="engClothes29" translatable="false">raincoat</string>
+    <string name="engClothes30" translatable="false">fur coat</string>
+    <string name="engClothes31" translatable="false">belt</string>
+    <string name="engClothes32" translatable="false">tie</string>
+    <string name="engClothes33" translatable="false">glove</string>
+    <string name="engClothes34" translatable="false">scarf</string>
+    <string name="engClothes35" translatable="false">nightie</string>
+    <string name="engClothes36" translatable="false">pyjama</string>
+    <string name="engClothes37" translatable="false">tracksuit</string>
+    <string name="engClothes38" translatable="false">dungarees</string>
+    <string name="engClothes39" translatable="false">umbrella</string>
+    <string name="engClothes40" translatable="false">watch</string>
+    <string name="engClothes41" translatable="false">earring</string>
+    <string name="engClothes42" translatable="false">ring</string>
+    <string name="engClothes43" translatable="false">necklace</string>
+    <string name="engClothes44" translatable="false">bracelet</string>
+    <string name="engClothes45" translatable="false">glasses</string>
+
+
+
+    <string name="engPet2" translatable="false">pet</string>
+    <string name="engPet3" translatable="false">cat</string>
+    <string name="engPet4" translatable="false">kitten</string>
+    <string name="engPet5" translatable="false">dog</string>
+    <string name="engPet6" translatable="false">puppy</string>
+    <string name="engPet7" translatable="false">hamster</string>
+    <string name="engPet8" translatable="false">guinea pig</string>
+    <string name="engPet9" translatable="false">farm</string>
+    <string name="engPet10" translatable="false">chicken</string>
+    <string name="engPet11" translatable="false">rooster</string>
+    <string name="engPet12" translatable="false">turkey</string>
+    <string name="engPet13" translatable="false">goat</string>
+    <string name="engPet14" translatable="false">kid</string>
+    <string name="engPet15" translatable="false">sheep</string>
+    <string name="engPet16" translatable="false">lamb</string>
+    <string name="engPet17" translatable="false">bull</string>
+    <string name="engPet18" translatable="false">cow</string>
+    <string name="engPet19" translatable="false">calf</string>
+    <string name="engPet20" translatable="false">horse</string>
+    <string name="engPet21" translatable="false">pig</string>
+    <string name="engPet22" translatable="false">piglet</string>
+    <string name="engPet23" translatable="false">rabbit</string>
+    <string name="engPet24" translatable="false">animal</string>
+    <string name="engPet25" translatable="false">bear</string>
+    <string name="engPet26" translatable="false">fox</string>
+    <string name="engPet27" translatable="false">rabbit</string>
+    <string name="engPet28" translatable="false">wolf</string>
+    <string name="engPet29" translatable="false">pig</string>
+    <string name="engPet30" translatable="false">deer</string>
+    <string name="engPet31" translatable="false">moose</string>
+    <string name="engPet32" translatable="false">donkey</string>
+    <string name="engPet33" translatable="false">buffalo</string>
+    <string name="engPet34" translatable="false">camel</string>
+    <string name="engPet35" translatable="false">giraffe</string>
+    <string name="engPet36" translatable="false">hippopotamus</string>
+    <string name="engPet37" translatable="false">zebra</string>
+    <string name="engPet38" translatable="false">kangaroo</string>
+    <string name="engPet39" translatable="false">elephant</string>
+    <string name="engPet40" translatable="false">llama</string>
+    <string name="engPet41" translatable="false">foal</string>
+    <string name="engPet42" translatable="false">armadillo</string>
+    <string name="engPet43" translatable="false">leopard</string>
+    <string name="engPet44" translatable="false">lion</string>
+    <string name="engPet45" translatable="false">tiger</string>
+    <string name="engPet46" translatable="false">bison</string>
+    <string name="engPet47" translatable="false">koala</string>
+    <string name="engPet48" translatable="false">hyena</string>
+    <string name="engPet49" translatable="false">panda</string>
+    <string name="engPet50" translatable="false">rhinoceros</string>
+    <string name="engPet51" translatable="false">monkey</string>
+    <string name="engPet52" translatable="false">gorilla</string>
+    <string name="engPet53" translatable="false">chimpanzee</string>
+    <string name="engPet54" translatable="false">gibbon</string>
+    <string name="engPet55" translatable="false">baboon</string>
+    <string name="engPet56" translatable="false">anteater</string>
+    <string name="engPet57" translatable="false">mouse</string>
+    <string name="engPet58" translatable="false">possum</string>
+    <string name="engPet59" translatable="false">skunk</string>
+    <string name="engPet60" translatable="false">bat</string>
+    <string name="engPet61" translatable="false">beaver</string>
+    <string name="engPet62" translatable="false">gopher</string>
+    <string name="engPet63" translatable="false">squirrel</string>
+    <string name="engPet64" translatable="false">rat</string>
+    <string name="engPet65" translatable="false">chipmunk</string>
+    <string name="engPet66" translatable="false">porcupine</string>
+    <string name="engPet67" translatable="false">raccoon</string>
+    <string name="engPet68" translatable="false">coral</string>
+    <string name="engPet69" translatable="false">seal</string>
+    <string name="engPet70" translatable="false">crocodile</string>
+    <string name="engPet71" translatable="false">alligator</string>
+    <string name="engPet72" translatable="false">fish</string>
+    <string name="engPet73" translatable="false">trout</string>
+    <string name="engPet74" translatable="false">bass</string>
+    <string name="engPet75" translatable="false">salmon</string>
+    <string name="engPet76" translatable="false">flounder</string>
+    <string name="engPet77" translatable="false">swordfish</string>
+    <string name="engPet78" translatable="false">eel</string>
+    <string name="engPet79" translatable="false">otter</string>
+    <string name="engPet80" translatable="false">walrus</string>
+    <string name="engPet81" translatable="false">mussel</string>
+    <string name="engPet82" translatable="false">snail</string>
+    <string name="engPet83" translatable="false">shrimp</string>
+    <string name="engPet84" translatable="false">oyster</string>
+    <string name="engPet85" translatable="false">lobster</string>
+    <string name="engPet86" translatable="false">crab</string>
+    <string name="engPet87" translatable="false">crayfish</string>
+    <string name="engPet88" translatable="false">shark</string>
+    <string name="engPet89" translatable="false">jellyfish</string>
+    <string name="engPet90" translatable="false">sea urchin</string>
+    <string name="engPet91" translatable="false">whale</string>
+    <string name="engPet92" translatable="false">frog</string>
+    <string name="engPet93" translatable="false">turtle</string>
+    <string name="engPet94" translatable="false">dolphin</string>
+    <string name="engPet95" translatable="false">sea snake</string>
+    <string name="engPet96" translatable="false">mollusc</string>
+    <string name="engPet97" translatable="false">shellfish</string>
+    <string name="engPet98" translatable="false">seafood</string>
+    <string name="engPet99" translatable="false">octopus</string>
+    <string name="engPet100" translatable="false">cachalot</string>
+    <string name="engPet101" translatable="false">starfish</string>
+    <string name="engPet102" translatable="false">bird</string>
+    <string name="engPet103" translatable="false">robin</string>
+    <string name="engPet104" translatable="false">jay</string>
+    <string name="engPet105" translatable="false">hummingbird</string>
+    <string name="engPet106" translatable="false">pheasant</string>
+    <string name="engPet107" translatable="false">crow</string>
+    <string name="engPet108" translatable="false">flamingo</string>
+    <string name="engPet109" translatable="false">seagull</string>
+    <string name="engPet110" translatable="false">sparrow</string>
+    <string name="engPet111" translatable="false">woodpecker</string>
+    <string name="engPet112" translatable="false">swallow</string>
+    <string name="engPet113" translatable="false">pigeon</string>
+    <string name="engPet114" translatable="false">owl</string>
+    <string name="engPet115" translatable="false">hawk</string>
+    <string name="engPet116" translatable="false">eagle</string>
+    <string name="engPet117" translatable="false">canary</string>
+    <string name="engPet118" translatable="false">cuckoo</string>
+    <string name="engPet119" translatable="false">cockatoo</string>
+    <string name="engPet120" translatable="false">parrot</string>
+    <string name="engPet121" translatable="false">duck</string>
+    <string name="engPet122" translatable="false">goose</string>
+    <string name="engPet123" translatable="false">swan</string>
+    <string name="engPet124" translatable="false">crane</string>
+    <string name="engPet125" translatable="false">stork</string>
+    <string name="engPet126" translatable="false">pelican</string>
+    <string name="engPet127" translatable="false">peacock</string>
+    <string name="engPet128" translatable="false">penguin</string>
+    <string name="engPet129" translatable="false">ostrich</string>
+    <string name="engPet130" translatable="false">insect</string>
+    <string name="engPet131" translatable="false">fly</string>
+    <string name="engPet132" translatable="false">mosquito</string>
+    <string name="engPet133" translatable="false">flea</string>
+    <string name="engPet134" translatable="false">firefly</string>
+    <string name="engPet135" translatable="false">moth</string>
+    <string name="engPet136" translatable="false">dragonfly</string>
+    <string name="engPet137" translatable="false">spider</string>
+    <string name="engPet138" translatable="false">ladybug</string>
+    <string name="engPet139" translatable="false">wasp</string>
+    <string name="engPet140" translatable="false">tick</string>
+    <string name="engPet141" translatable="false">bee</string>
+    <string name="engPet142" translatable="false">caterpillar</string>
+    <string name="engPet143" translatable="false">butterfly</string>
+    <string name="engPet144" translatable="false">ant</string>
+    <string name="engPet145" translatable="false">grasshopper</string>
+    <string name="engPet146" translatable="false">beetle</string>
+    <string name="engPet147" translatable="false">termite</string>
+    <string name="engPet148" translatable="false">roach</string>
+    <string name="engPet149" translatable="false">scorpion</string>
+    <string name="engPet150" translatable="false">centipede</string>
+    <string name="engPet151" translatable="false">mantis</string>
+    <string name="engPet152" translatable="false">cricket</string>
+    <string name="engPet153" translatable="false">bug</string>
+    <string name="engPet154" translatable="false">worm</string>
+
+
+    <string name="engQuantity2" translatable="false">quantity</string>
+    <string name="engQuantity3" translatable="false">number</string>
+    <string name="engQuantity4" translatable="false">figure</string>
+    <string name="engQuantity5" translatable="false">whole</string>
+    <string name="engQuantity6" translatable="false">half</string>
+    <string name="engQuantity7" translatable="false">one third</string>
+    <string name="engQuantity8" translatable="false">single</string>
+    <string name="engQuantity9" translatable="false">pair</string>
+    <string name="engQuantity10" translatable="false">ten</string>
+    <string name="engQuantity11" translatable="false">hundred</string>
+    <string name="engQuantity12" translatable="false">length</string>
+    <string name="engQuantity13" translatable="false">lot of</string>
+    <string name="engQuantity14" translatable="false">maximum</string>
+    <string name="engQuantity15" translatable="false">big</string>
+    <string name="engQuantity16" translatable="false">huge</string>
+    <string name="engQuantity17" translatable="false">numerous</string>
+    <string name="engQuantity18" translatable="false">innumerable</string>
+    <string name="engQuantity19" translatable="false">little</string>
+    <string name="engQuantity20" translatable="false">enough</string>
+    <string name="engQuantity21" translatable="false">few</string>
+    <string name="engQuantity22" translatable="false">minimum</string>
+    <string name="engQuantity23" translatable="false">sufficient</string>
+    <string name="engQuantity24" translatable="false">insufficient</string>
+    <string name="engQuantity25" translatable="false">lack</string>
+    <string name="engQuantity26" translatable="false">sun</string>
+    <string name="engQuantity27" translatable="false">combination</string>
+    <string name="engQuantity28" translatable="false">part</string>
+    <string name="engQuantity29" translatable="false">share</string>
+    <string name="engQuantity30" translatable="false">period</string>
+    <string name="engQuantity31" translatable="false">piece</string>
+    <string name="engQuantity32" translatable="false">majority</string>
+    <string name="engQuantity33" translatable="false">minority</string>
+    <string name="engQuantity34" translatable="false">distribution</string>
+    <string name="engQuantity35" translatable="false">distribute</string>
+    <string name="engQuantity36" translatable="false">increase</string>
+    <string name="engQuantity37" translatable="false">rise</string>
+    <string name="engQuantity38" translatable="false">grow</string>
+    <string name="engQuantity39" translatable="false">raise</string>
+    <string name="engQuantity40" translatable="false">fill with</string>
+    <string name="engQuantity41" translatable="false">reduction</string>
+    <string name="engQuantity42" translatable="false">reduce</string>
+    <string name="engQuantity43" translatable="false">dimonish</string>
+    <string name="engQuantity44" translatable="false">shorten</string>
+    <string name="engQuantity45" translatable="false">sgortening</string>
+    <string name="engQuantity46" translatable="false">size</string>
+    <string name="engQuantity47" translatable="false">amount</string>
+    <string name="engQuantity48" translatable="false">volume</string>
+    <string name="engQuantity49" translatable="false">capacity</string>
+
+
+
+
+
+
+</resources>

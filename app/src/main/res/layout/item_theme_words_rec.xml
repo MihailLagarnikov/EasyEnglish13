@@ -18,6 +18,7 @@
             <TextView
                     android:text="1"
                     style="@style/text14colorMain"
+                    android:textColor="@color/newText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/textViewNumber"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
@@ -27,6 +28,7 @@
             <TextView
                     android:text="Word"
                     style="@style/text16colorMain"
+                    android:textColor="@color/newText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewEnglish" app:layout_constraintStart_toEndOf="@+id/textViewNumber"
@@ -35,20 +37,13 @@
             <TextView
                     android:text="перевод"
                     style="@style/text14colorLight"
+                    android:textColor="@color/colorTextLight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textViewRussn"
                     app:layout_constraintTop_toBottomOf="@+id/textViewEnglish"
-                    app:layout_constraintStart_toStartOf="@+id/textViewEnglish" android:fontFamily="@font/roboto"/>
-            <TextView
-                    android:text="@string/theme7"
-                    android:visibility="gone"
-                    style="@style/text10colorWhite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textViewDelet"
-                    app:layout_constraintStart_toStartOf="@+id/textViewEnglish"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewRussn"/>
+                    app:layout_constraintStart_toStartOf="@+id/textViewEnglish" android:fontFamily="@font/roboto"
+                    android:layout_marginTop="6dp"/>
             <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Be Brain</string>
+
+    <string name="admobId">ca-app-pub-2421174998731562/3002767167</string>
+
+    <string name="hintTestTop1">escolha a opção correta</string>
+    <string name="hintTestTop2">insira tradução</string>
+    <string name="hintTestTop3">pronunciar a tradução</string>
+    <string name="numberTestTop">LIÇÃO NO.</string>
+
+    <string name="theme1">CATEGORIAS DE PALAVRAS</string>
+    <string name="theme2">words</string>
+    <string name="theme12">% \nestudou</string>
+
+
+    <string name="dialog1">Tem certeza de que deseja interromper a aula?</string>
+    <string name="dialog2">Sim</string>
+    <string name="dialog3">Não</string>
+
+    <string name="themeMain1">O homem</string>
+    <string name="themeNumber1">97</string>
+    <string name="themeMain2">Saúde</string>
+    <string name="themeNumber2">60</string>
+    <string name="themeMain3">Família</string>
+    <string name="themeNumber3">45</string>
+    <string name="themeMain4">House</string>
+    <string name="themeNumber4">112</string>
+    <string name="themeMain5">Viajando</string>
+    <string name="themeNumber5">77</string>
+    <string name="themeMain6">Quantidade</string>
+    <string name="themeNumber6">48</string>
+    <string name="themeMain7">Alimento</string>
+    <string name="themeNumber7">122</string>
+    <string name="themeMain8">Natureza</string>
+    <string name="themeNumber8">60</string>
+    <string name="themeMain9">Cores</string>
+    <string name="themeNumber9">59</string>
+    <string name="themeMain10">Roupas</string>
+    <string name="themeNumber10">44</string>
+    <string name="themeMain11">Animais</string>
+    <string name="themeNumber11">153</string>
+    <string name="themeMain12">Verbos de ação</string>
+    <string name="themeNumber12">26</string>
+
+
+    <string name="crash_toast_text">Erro! Enviar relatório!</string>
+
+
+    <string name="startChild1">Você está indo muito bem</string>
+    <string name="startChild2">palavras aprendidas com</string>
+    <string name="startChild3">REPETIR</string>
+    <string name="startChild4">APRENDA A PALAVRA</string>
+    <string name="startChild5">APRENDA AS PALAVRAS NOVAMENTE</string>
+    <string name="startChild7">Veja as palavras</string>
+    <string name="startChild6">Parabéns!\n\n
+
+        Sujeito estudado. Agora você pode
+        use o recurso soneca para
+        verificação rápida de palavras aprendidas</string>
+
+    <string name="newThemeWord">Voltar para a lista de tópicos</string>
+
+    <string name="introLabel1">5 minutos por dia</string>
+    <string name="intro1">Apenas 5 minutos por dia e em um mês
+        Seu vocabulário aumentará em 400 palavras.
+        Basta selecionar um tópico e começar o treinamento.  </string>
+        <string name="introLabel2">Tópicos e pronúncia</string>
+    <string name="intro2">Você pode ver a lista inteira de palavras.
+        em cada tópico e ouvir sua pronúncia.
+        A lista de tópicos é atualizada constantemente.</string>
+    <string name="introLabel3">Função de repetição</string>
+    <string name="intro3"> Você pode usar a função de repetição.
+        Esta é uma forma leve de aprendizado para rápida
+        testar e repetir as palavras aprendidas</string>
+    <string name="intro4">ESCOLHA O TEMA</string>
+
+
+    <string name="ifinish1">Parabéns!\n\n
+
+        Você aprendeu muitas palavras novas em apenas 5 minutos. Continue no mesmo ritmo e você definitivamente terá sucesso.</string>
+    <string name="ifinish2">Parabéns!\n\n
+
+        Todas as palavras do tópico são estudadas! Você fez um ótimo trabalho. Você pode usar o recurso soneca sempre que quiser.</string>
+
+
+
+    <string name="ifinish3">OK</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="labelName" type="String"/>
+        <variable name="mesage" type="String"/>
+        <variable name="visibleBtn" type="Boolean"/>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:id="@+id/imageViewIconChild" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="32dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="32dp"/>
+        <TextView
+                android:text="@{labelName}"
+                style="@style/text20colorWhite"
+                android:textColor="@color/colorAnswerFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewLabel" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIconChild" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:fontFamily="@font/lekton"/>
+        <TextView
+                android:text="@{mesage}"
+                style="@style/text14colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMesage" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLabel" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" android:fontFamily="@font/roboto_medium"/>
+        <Button
+                android:text="@string/intro4"
+                android:visibility="@{visibleBtn ? View.VISIBLE : View.GONE}"
+                style="@style/text16colorWhite"
+                android:background="@drawable/rectangl_light_transparent"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:id="@+id/buttonIntro" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMesage" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="42dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="42dp" android:fontFamily="@font/roboto_medium"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

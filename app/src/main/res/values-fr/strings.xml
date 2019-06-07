@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Be Brain</string>
+
+    <string name="admobId">ca-app-pub-2421174998731562/3002767167</string>
+
+    <string name="hintTestTop1">choisissez la bonne option</string>
+    <string name="hintTestTop2">entrer traduction</string>
+    <string name="hintTestTop3">prononcer la traduction</string>
+    <string name="numberTestTop">LEÇON NO.</string>
+
+    <string name="theme1">CATÉGORIES DE MOTS</string>
+    <string name="theme2">words</string>
+    <string name="theme12">% \nétudié</string>
+
+
+    <string name="dialog1">Êtes-vous sûr de vouloir rompre la leçon?</string>
+    <string name="dialog2">Oui</string>
+    <string name="dialog3">Non</string>
+
+    <string name="themeMain1">"L'homme"</string>
+    <string name="themeNumber1">97</string>
+    <string name="themeMain2">Santé</string>
+    <string name="themeNumber2">60</string>
+    <string name="themeMain3">Famille</string>
+    <string name="themeNumber3">45</string>
+    <string name="themeMain4">Maison</string>
+    <string name="themeNumber4">112</string>
+    <string name="themeMain5">Voyager</string>
+    <string name="themeNumber5">77</string>
+    <string name="themeMain6">Montant</string>
+    <string name="themeNumber6">48</string>
+    <string name="themeMain7">Nourriture</string>
+    <string name="themeNumber7">122</string>
+    <string name="themeMain8">La nature</string>
+    <string name="themeNumber8">60</string>
+    <string name="themeMain9">Couleurs</string>
+    <string name="themeNumber9">59</string>
+    <string name="themeMain10">Vêtements</string>
+    <string name="themeNumber10">44</string>
+    <string name="themeMain11">Animaux</string>
+    <string name="themeNumber11">153</string>
+    <string name="themeMain12">"Verbes d'action"</string>
+    <string name="themeNumber12">26</string>
+
+
+    <string name="crash_toast_text">Erreur! Envoyer le rapport!</string>
+
+
+    <string name="startChild1">Tu vas très bien</string>
+    <string name="startChild2">mots appris de</string>
+    <string name="startChild3">RÉPÉTITION</string>
+    <string name="startChild4">APPRENDRE MOT</string>
+    <string name="startChild5">APPRENEZ DE NOUVEAU MOTS</string>
+    <string name="startChild7">Voir les mots</string>
+    <string name="startChild6">Félicitations!\n\n
+
+        Sujet étudié. Maintenant vous pouvez
+        utiliser la fonctionnalité de répétition pour
+        vérification rapide des mots appris</string>
+
+    <string name="newThemeWord">Retour à la liste des sujets</string>
+
+    <string name="introLabel1">5 minutes par jour</string>
+    <string name="intro1">Seulement 5 minutes par jour et par mois
+        Votre vocabulaire augmentera de 400 mots.
+        Il suffit de sélectionner un sujet et de commencer la formation.  </string>
+    <string name="introLabel2">Sujets et prononciation</string>
+    <string name="intro2">Vous pouvez voir la liste complète des mots.
+        dans chaque sujet et écoutez leur prononciation.
+        La liste des sujets est constamment mise à jour.</string>
+    <string name="introLabel3">Fonction de répétition</string>
+    <string name="intro3"> Vous pouvez utiliser la fonction de répétition.
+        C’est une forme légère d’apprentissage pour
+        tester et répéter les mots appris</string>
+    <string name="intro4">CHOISISSEZ LE THÈME</string>
+
+
+    <string name="ifinish1">Félicitations!\n\n
+
+        Vous avez appris beaucoup de nouveaux mots en seulement 5 minutes. Continuez au même rythme et vous réussirez certainement.</string>
+    <string name="ifinish2">Félicitations!\n\n
+
+        Tous les mots du sujet sont étudiés! Vous avez fait un excellent travail. Vous pouvez utiliser la fonction de répétition à tout moment.</string>
+
+
+
+    <string name="ifinish3">OK</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+</resources>

@@ -7,11 +7,11 @@
             <import type="android.view.View"/>
         <variable
                 name="mData"
-                type="ru.lagarnikov.easyenglish13.DataMidleFragment" />
+                type="ru.lagarnikov.easyenglish13.domain.model.DataMidleFragment" />
 
         <variable
                 name="mVisibile"
-                type="ru.lagarnikov.easyenglish13.DataVisibileView" />
+                type="ru.lagarnikov.easyenglish13.presentation.model.DataVisibileView" />
 
 
     </data>
@@ -31,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textQestionTestA"
                 style="@style/text28colorMain"
+                android:textColor="@color/newText"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="8dp" android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
@@ -110,7 +111,8 @@
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintBottom_toBottomOf="parent"/>
                         <TextView
-                                android:text="1"
+                                android:text="@string/_1"
+                                android:textColor="@color/newText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/text22colorMain"
@@ -122,7 +124,7 @@
                         <TextView
                                 tools:text="поезд"
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextMain : @android:color/white}"
+                                android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextLight : @android:color/white}"
                                 android:text="@{mData.text1Answer}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -138,23 +140,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/text22colorMain"
+                                android:textColor="@color/newText"
                                 android:id="@+id/textViewOption1" android:layout_marginBottom="8dp"
                                 app:layout_constraintBottom_toTopOf="@+id/textAnswer1TestAB"
                                 app:layout_constraintStart_toEndOf="@+id/textItem1TestAB"
                                 android:layout_marginStart="59dp"
                                 android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                                android:fontFamily="@font/roboto"/>
-                        <ImageView
-                                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
-                                android:id="@+id/imageEclip1TestAB" app:layout_constraintEnd_toEndOf="parent"
-                                android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
-                                app:layout_constraintBottom_toTopOf="parent"/>
+                                android:fontFamily="@font/roboto_medium"/>
                         <ImageView
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
                                 android:id="@+id/imageViewSound1TestAB" app:layout_constraintEnd_toEndOf="parent"
                                 android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
                                 app:layout_constraintBottom_toTopOf="parent"/>
@@ -182,7 +178,8 @@
                                 app:layout_constraintHorizontal_bias="0.0"
                                 tools:ignore="ContentDescription" app:layout_constraintBottom_toBottomOf="parent"/>
                         <TextView
-                                android:text="2"
+                                android:text="@string/_2"
+                                android:textColor="@color/newText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/text22colorMain"
@@ -194,7 +191,7 @@
                         <TextView
                                 tools:text="домик для гостей"
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:textColor="@{mVisibile.numberAnswer!=2 ? @color/colorTextMain : @android:color/white}"
+                                android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextLight : @android:color/white}"
                                 android:text="@{mData.text2Answer}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -206,6 +203,7 @@
                                 android:fontFamily="@font/roboto"/>
                         <TextView
                                 tools:text="guest house"
+                                android:textColor="@color/newText"
                                 android:text="@{mData.text2}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -215,18 +213,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/textItem2TestAB"
                                 android:layout_marginStart="59dp"
                                 android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                                android:fontFamily="@font/roboto"/>
-                        <ImageView
-                                android:layout_width="24dp"
-                                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
-                                android:id="@+id/imageEclip2TestAB" app:layout_constraintEnd_toEndOf="parent"
-                                android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
-                                app:layout_constraintBottom_toTopOf="parent"/>
+                                android:fontFamily="@font/roboto_medium"/>
                         <ImageView
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
                                 android:id="@+id/imageViewSound2TestAB" app:layout_constraintEnd_toEndOf="parent"
                                 android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
                                 app:layout_constraintBottom_toTopOf="parent"/>
@@ -253,7 +244,8 @@
                                 app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintBottom_toBottomOf="parent"/>
                         <TextView
-                                android:text="3"
+                                android:text="@string/_3"
+                                android:textColor="@color/newText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/text22colorMain"
@@ -265,7 +257,7 @@
                         <TextView
                                 tools:text="поезд"
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:textColor="@{mVisibile.numberAnswer!=3 ? @color/colorTextMain : @android:color/white}"
+                                android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextLight : @android:color/white}"
                                 android:text="@{mData.text3Answer}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -277,6 +269,7 @@
                                 android:fontFamily="@font/roboto"/>
                         <TextView
                                 tools:text="train"
+                                android:textColor="@color/newText"
                                 android:text="@{mData.text3}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -286,18 +279,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/textItem3TestAB"
                                 android:layout_marginStart="59dp"
                                 android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                                android:fontFamily="@font/roboto"/>
-                        <ImageView
-                                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
-                                android:id="@+id/imageEclip3TestAB" app:layout_constraintEnd_toEndOf="parent"
-                                android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
-                                app:layout_constraintBottom_toTopOf="parent"/>
+                                android:fontFamily="@font/roboto_medium"/>
                         <ImageView
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
                                 android:id="@+id/imageViewSound3TestAB" app:layout_constraintEnd_toEndOf="parent"
                                 android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
                                 app:layout_constraintBottom_toTopOf="parent"/>
@@ -326,7 +312,8 @@
                                 app:layout_constraintBottom_toBottomOf="parent"
                         />
                         <TextView
-                                android:text="4"
+                                android:text="@string/_4"
+                                android:textColor="@color/newText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 style="@style/text22colorMain"
@@ -338,7 +325,7 @@
                         <TextView
                                 tools:text="хостел"
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:textColor="@{mVisibile.numberAnswer!=4 ? @color/colorTextMain : @android:color/white}"
+                                android:textColor="@{mVisibile.numberAnswer!=1 ? @color/colorTextLight : @android:color/white}"
                                 android:text="@{mData.text4Answer}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -350,6 +337,7 @@
                                 android:fontFamily="@font/roboto"/>
                         <TextView
                                 tools:text="hostel"
+                                android:textColor="@color/newText"
                                 android:text="@{mData.text4}"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -359,18 +347,11 @@
                                 app:layout_constraintStart_toEndOf="@+id/textItem4TestAB"
                                 android:layout_marginStart="59dp"
                                 android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                                android:fontFamily="@font/roboto"/>
-                        <ImageView
-                                android:visibility="@{!mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/ic_eclip"
-                                android:id="@+id/imageEclip4TestAB" app:layout_constraintEnd_toEndOf="parent"
-                                android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
-                                app:layout_constraintBottom_toTopOf="parent"/>
+                                android:fontFamily="@font/roboto_medium"/>
                         <ImageView
                                 android:visibility="@{mVisibile.answerNotDone ? View.VISIBLE : View.GONE}"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" app:srcCompat="@drawable/arrow_right_drop_circle_outline"
                                 android:id="@+id/imageViewSound4TestAB" app:layout_constraintEnd_toEndOf="parent"
                                 android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="parent"
                                 app:layout_constraintBottom_toTopOf="parent"/>

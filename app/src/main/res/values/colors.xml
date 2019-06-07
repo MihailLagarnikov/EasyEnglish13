@@ -16,4 +16,10 @@
     <color name="colorOrange">#FFA04C</color>
     <color name="colorSeekbarFon">#E8ECEF</color>
     <color name="colorWhiteLite">#35ffffff</color>
+    <color name="colorDont">#00ffffff</color>
+
+
+    <color name="newMainColor">#7561B6</color>
+    <color name="newLight">#FAF6F6</color>
+    <color name="newText">#62595E</color>
 </resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Be Brain</string>
+
+    <string name="admobId">ca-app-pub-2421174998731562/3002767167</string>
+
+    <string name="hintTestTop1">Wählen Sie die richtige Option</string>
+    <string name="hintTestTop2">Übersetzung eingeben</string>
+    <string name="hintTestTop3">sprechen Sie die Übersetzung aus</string>
+    <string name="numberTestTop">LEKTION NR.</string>
+
+    <string name="theme1">KATEGORIEN DER WÖRTER</string>
+    <string name="theme2">words</string>
+    <string name="theme12">% \nstudiert</string>
+
+
+    <string name="dialog1">Möchten Sie den Unterricht wirklich unterbrechen?</string>
+    <string name="dialog2">Ja</string>
+    <string name="dialog3">Nein</string>
+
+    <string name="themeMain1">Der mann</string>
+    <string name="themeNumber1">97</string>
+    <string name="themeMain2">Gesundheit</string>
+    <string name="themeNumber2">60</string>
+    <string name="themeMain3">Familie</string>
+    <string name="themeNumber3">45</string>
+    <string name="themeMain4">Haus</string>
+    <string name="themeNumber4">112</string>
+    <string name="themeMain5">Reisen</string>
+    <string name="themeNumber5">77</string>
+    <string name="themeMain6">Menge</string>
+    <string name="themeNumber6">48</string>
+    <string name="themeMain7">Essen</string>
+    <string name="themeNumber7">122</string>
+    <string name="themeMain8">Die Natur</string>
+    <string name="themeNumber8">60</string>
+    <string name="themeMain9">Farben</string>
+    <string name="themeNumber9">59</string>
+    <string name="themeMain10">Kleidung</string>
+    <string name="themeNumber10">44</string>
+    <string name="themeMain11">Tiere</string>
+    <string name="themeNumber11">153</string>
+    <string name="themeMain12">Aktionsverben</string>
+    <string name="themeNumber12">26</string>
+
+
+    <string name="crash_toast_text">Fehler! Bericht senden!</string>
+
+
+    <string name="startChild1">Ihnen geht es gut</string>
+    <string name="startChild2">Wörter gelernt von</string>
+    <string name="startChild3">WIEDERHOLEN</string>
+    <string name="startChild4">LERNEN SIE WORT</string>
+    <string name="startChild5">LERNEN SIE WIEDER WORTE</string>
+    <string name="startChild7">Siehe die Worte</string>
+    <string name="startChild6">Herzlichen Glückwunsch!\n\n
+
+        Fach studiert. Jetzt kannst du
+        Verwenden Sie die Schlummerfunktion für
+        Schnelle Überprüfung der gelernten Wörter</string>
+
+    <string name="newThemeWord">Zurück zur Themenliste</string>
+
+    <string name="introLabel1">5 Minuten am Tag</string>
+    <string name="intro1">Nur 5 Minuten am Tag und in einem Monat
+        Ihr Wortschatz wird um 400 Wörter erhöht.
+        Wählen Sie einfach ein Thema und beginnen Sie mit dem Training.  </string>
+    <string name="introLabel2">Themen und Aussprache</string>
+    <string name="intro2">Sie können die gesamte Liste der Wörter anzeigen.
+        in jedem Thema und hören Sie ihre Aussprache.
+        Die Themenliste wird ständig aktualisiert.</string>
+    <string name="introLabel3">Funktion wiederholen</string>
+    <string name="intro3"> Sie können die Wiederholfunktion verwenden.
+        Dies ist eine leichte Form des Lernens für den schnellen
+        Testen und wiederholen Sie die gelernten Wörter</string>
+    <string name="intro4">WÄHLEN SIE THEMA</string>
+
+
+    <string name="ifinish1">Herzlichen Glückwunsch!\n\n
+
+        Sie haben in nur 5 Minuten viele neue Wörter gelernt. Fahren Sie im gleichen Tempo fort und Sie werden definitiv Erfolg haben.</string>
+    <string name="ifinish2">Herzlichen Glückwunsch!\n\n
+
+        Alle Wörter des Themas werden studiert! Du hast einen tollen Job gemacht. Sie können die Schlummerfunktion jederzeit verwenden.</string>
+
+    <string name="ifinish3">OK</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+
+</resources>

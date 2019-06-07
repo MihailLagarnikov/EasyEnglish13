@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Be Brain</string>
+
+    <string name="admobId">ca-app-pub-2421174998731562/3002767167</string>
+
+    <string name="hintTestTop1">elige la opción correcta</string>
+    <string name="hintTestTop2">entrar en la traducción</string>
+    <string name="hintTestTop3">pronunciar la traducción</string>
+    <string name="numberTestTop">LECCIÓN NO.</string>
+
+    <string name="theme1">CATEGORIAS DE PALABRAS</string>
+    <string name="theme2">words</string>
+    <string name="theme12">% \nestudiado</string>
+
+
+    <string name="dialog1">¿Estás seguro de que quieres interrumpir la lección?</string>
+    <string name="dialog2">Si</string>
+    <string name="dialog3">No</string>
+
+    <string name="themeMain1">El hombre</string>
+    <string name="themeNumber1">97</string>
+    <string name="themeMain2">Salud</string>
+    <string name="themeNumber2">60</string>
+    <string name="themeMain3">Familia</string>
+    <string name="themeNumber3">45</string>
+    <string name="themeMain4">Casa</string>
+    <string name="themeNumber4">112</string>
+    <string name="themeMain5">Viajando</string>
+    <string name="themeNumber5">77</string>
+    <string name="themeMain6">Cantidad</string>
+    <string name="themeNumber6">48</string>
+    <string name="themeMain7">Comida</string>
+    <string name="themeNumber7">122</string>
+    <string name="themeMain8">Naturaleza</string>
+    <string name="themeNumber8">60</string>
+    <string name="themeMain9">Colores</string>
+    <string name="themeNumber9">59</string>
+    <string name="themeMain10">Ropa</string>
+    <string name="themeNumber10">44</string>
+    <string name="themeMain11">Animales</string>
+    <string name="themeNumber11">153</string>
+    <string name="themeMain12">Verbos de acción</string>
+    <string name="themeNumber12">26</string>
+
+
+    <string name="crash_toast_text">Error! Enviar informe!</string>
+
+
+    <string name="startChild1">Lo estas haciendo genial</string>
+    <string name="startChild2">palabras aprendidas de</string>
+    <string name="startChild3">REPETIR</string>
+    <string name="startChild4">Aprender palabra</string>
+    <string name="startChild5">APRENDER LAS PALABRAS DE NUEVO</string>
+    <string name="startChild7">Ver las palabras</string>
+    <string name="startChild6">Enhorabuena!\n\n
+
+        Sujeto estudiado. Ahora tu puedes
+        utilizar la función de repetición para
+        control rápido de las palabras aprendidas</string>
+
+    <string name="newThemeWord">Volver a la lista de temas</string>
+
+    <string name="introLabel1">5 minutos al día</string>
+    <string name="intro1">Solo 5 minutos al día y en un mes.
+        Tu vocabulario aumentará en 400 palabras.
+        Solo selecciona un tema y comienza a entrenar. </string>
+    <string name="introLabel2">Temas y pronunciación</string>
+    <string name="intro2">Puedes ver la lista completa de palabras.
+        en cada tema y escuchar su pronunciación.
+        La lista de temas se actualiza constantemente.</string>
+    <string name="introLabel3">Función de repetición</string>
+    <string name="intro3"> Puede utilizar la función de repetición.
+        Esta es una forma ligera de aprendizaje para una rápida
+        prueba y repite las palabras aprendidas</string>
+    <string name="intro4">ELIJA EL TEMA</string>
+
+
+    <string name="ifinish1">Enhorabuena!\n\n
+
+        Has aprendido muchas palabras nuevas en solo 5 minutos. Continúa al mismo ritmo y definitivamente tendrás éxito.</string>
+    <string name="ifinish2">Enhorabuena!\n\n
+
+        ¡Se estudian todas las palabras del tema! Hiciste un gran trabajo Puede utilizar la función de repetición cuando lo desee.</string>
+
+
+
+    <string name="ifinish3">OK</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+</resources>
